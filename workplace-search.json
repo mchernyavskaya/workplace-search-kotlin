@@ -716,18 +716,11 @@
             "minItems": 2,
             "maxItems": 2,
             "additionalProperties": false,
-            "items": [
-              {
-                "type": "number",
-                "minimum": -180,
-                "maximum": 180
-              },
-              {
-                "type": "number",
-                "minimum": -90,
-                "maximum": 90
-              }
-            ]
+            "items": {
+              "type": "number",
+              "minimum": -180,
+              "maximum": 180
+            }
           }
         ]
       },
@@ -1330,14 +1323,6 @@
             "type": "integer",
             "description": "Optional timeout in ms for searching remote sources",
             "minimum": 1
-          },
-          "content_sources": {
-            "type": "array",
-            "description": "Optional list of content source ids to only return results from",
-            "minItems": 1,
-            "items": {
-              "type": "string"
-            }
           }
         }
       },
@@ -1997,10 +1982,6 @@
       "content_source_job_type_window": {
         "type": "object",
         "description": "A time window that applies to a specific type of job",
-        "required": [
-          "job_type",
-          "day"
-        ],
         "properties": {
           "job_type": {
             "type": "string",
@@ -2027,11 +2008,11 @@
           },
           "start": {
             "type": "string",
-            "description": "The start of the time window, in the format of HH:mm:ssZ"
+            "description": "The start of the time window, as an ISO-8601 duration"
           },
           "end": {
             "type": "string",
-            "description": "The end of the time window, in the format of HH:mm:ssZ"
+            "description": "The end of the time window, as an ISO-8601 duration"
           }
         },
         "additionalProperties": false
@@ -2822,6 +2803,28 @@
         "required": true,
         "description": "Unique ID for a content source document. Provided upon or returned at creation."
       },
+      "synonym_set_id": {
+        "name": "synonym_set_id",
+        "schema": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 487
+        },
+        "in": "path",
+        "required": true,
+        "description": "Unique ID for a synonym set. Provided upon or returned at creation."
+      },
+      "document_id": {
+        "name": "document_id",
+        "schema": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 487
+        },
+        "in": "path",
+        "required": true,
+        "description": "Unique ID for a content source document. Provided upon or returned at creation."
+      },
       "get_token": {
         "name": "get_token",
         "schema": {
@@ -3572,7 +3575,7 @@
           {
             "name": "document_id",
             "in": "path",
-            "$ref": "#/components/parameters/external_id",
+            "$ref": "#/components/parameters/document_id",
             "required": true
           }
         ],
@@ -3948,9 +3951,6 @@
         "responses": {
           "401": {
             "description": "unauthorized"
-          },
-          "402": {
-            "description": "payment required"
           },
           "404": {
             "description": "not found"
@@ -4400,7 +4400,7 @@
           {
             "name": "synonym_set_id",
             "in": "path",
-            "$ref": "#/components/parameters/external_id",
+            "$ref": "#/components/parameters/synonym_set_id",
             "required": true
           }
         ],
@@ -4444,7 +4444,7 @@
           {
             "name": "synonym_set_id",
             "in": "path",
-            "$ref": "#/components/parameters/external_id",
+            "$ref": "#/components/parameters/synonym_set_id",
             "required": true
           }
         ],
@@ -4508,7 +4508,7 @@
           {
             "name": "synonym_set_id",
             "in": "path",
-            "$ref": "#/components/parameters/external_id",
+            "$ref": "#/components/parameters/synonym_set_id",
             "required": true
           }
         ],
@@ -4682,7 +4682,7 @@
       "put": {
         "summary": "Update current triggers blocklist",
         "description": "Update current triggers blocklist",
-        "operationId": "putTriggersBlocklist",
+        "operationId": "updateTriggersBlocklist",
         "security": [
           {
             "bearer_auth": [
@@ -4707,13 +4707,6 @@
             "description": "ok",
             "content": {
               "application/json": {
-                "example": {
-                  "blocklist": [
-                    "one",
-                    "two",
-                    "three"
-                  ]
-                },
                 "schema": {
                   "$ref": "#/components/schemas/triggers_blocklist_wrapper_definition"
                 }
