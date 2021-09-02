@@ -1,247 +1,46 @@
-# org.elasticsearch.workplacesearch - Kotlin client library for Workplace Search API
+# Kotlin client library for Workplace Search API - Investigation
 
-## Requires
+## Considered tools
 
-* Kotlin 1.4.30
-* Gradle 5.3
+ - [swagger-codegen](https://github.com/swagger-api/swagger-codegen)
+ - [openapi-generator](https://github.com/openapitools/openapi-generator)
 
-## Build
+[Comparison](https://www.githubcompare.com/swagger-api/swagger-codegen+openapitools/openapi-generator) of the repos shows that they both are heavily starred, regularly updated and widely used. The `openapi-generator` has actually been forked from `swagger-codegen` in 2018 for reasons explained [here](https://github.com/OpenAPITools/openapi-generator/blob/master/docs/qna.md), so they have a lot in common.
 
-First, create the gradle wrapper script:
+The underside of that is, both seem to have a staggering number of open issues (some of them very, very moldy).
 
-```
-gradle wrapper
-```
+## Questions to ask
 
-Then, run:
-
-```
-./gradlew check assemble
-```
-
-This runs all tests and packages the library.
-
-## Features/Implementation Notes
-
-* Supports JSON inputs/outputs, File inputs, and Form inputs.
-* Supports collection formats for query parameters: csv, tsv, ssv, pipes.
-* Some Kotlin and Java types are fully qualified to avoid conflicts with types defined in Swagger definitions.
-* Implementation of ApiClient is intended to reduce method counts, specifically to benefit Android targets.
-
-<a name="documentation-for-api-endpoints"></a>
-## Documentation for API Endpoints
-
-All URIs are relative to *{schemes}://{host}:{port}*
-
-Class | Method | HTTP request | Description
------------- | ------------- | ------------- | -------------
-*AnalyticsAPIApi* | [**createAnalyticsEvent**](docs/AnalyticsAPIApi.md#createanalyticsevent) | **POST** /api/ws/v1/analytics/event | Capture click and feedback analytic events
-*ContentSourcesAPIApi* | [**createContentSource**](docs/ContentSourcesAPIApi.md#createcontentsource) | **POST** /api/ws/v1/sources | Create a content source
-*ContentSourcesAPIApi* | [**deleteContentSource**](docs/ContentSourcesAPIApi.md#deletecontentsource) | **DELETE** /api/ws/v1/sources/{content_source_id} | Deletes a content source by ID
-*ContentSourcesAPIApi* | [**getAutoQueryRefinementDetails**](docs/ContentSourcesAPIApi.md#getautoqueryrefinementdetails) | **GET** /api/ws/v1/sources/{content_source_id}/automatic_query_refinement | Retrieves a content source's automatic query refinement details
-*ContentSourcesAPIApi* | [**getContentSource**](docs/ContentSourcesAPIApi.md#getcontentsource) | **GET** /api/ws/v1/sources/{content_source_id} | Retrieves a content source by ID
-*ContentSourcesAPIApi* | [**listContentSources**](docs/ContentSourcesAPIApi.md#listcontentsources) | **GET** /api/ws/v1/sources | Retrieves all content sources
-*ContentSourcesAPIApi* | [**putContentSource**](docs/ContentSourcesAPIApi.md#putcontentsource) | **PUT** /api/ws/v1/sources/{content_source_id} | Update a content source
-*ContentSourcesAPIApi* | [**putContentSourceIcons**](docs/ContentSourcesAPIApi.md#putcontentsourceicons) | **PUT** /api/ws/v1/sources/{content_source_id}/icon | Upload content source icons
-*DefaultApi* | [**getCurrentUser**](docs/DefaultApi.md#getcurrentuser) | **GET** /api/ws/v1/whoami | Get the authenticated user
-*DefaultApi* | [**getTriggersBlocklist**](docs/DefaultApi.md#gettriggersblocklist) | **GET** /api/ws/v1/automatic_query_refinement | Get current triggers blocklist
-*DefaultApi* | [**putTriggersBlocklist**](docs/DefaultApi.md#puttriggersblocklist) | **PUT** /api/ws/v1/automatic_query_refinement | Update current triggers blocklist
-*DocumentsAPIApi* | [**deleteDocuments**](docs/DocumentsAPIApi.md#deletedocuments) | **POST** /api/ws/v1/sources/{content_source_id}/documents/bulk_destroy | Deletes a list of documents from a custom content source
-*DocumentsAPIApi* | [**deleteDocumentsByQuery**](docs/DocumentsAPIApi.md#deletedocumentsbyquery) | **DELETE** /api/ws/v1/sources/{content_source_id}/documents | Deletes documents by query in a custom content source
-*DocumentsAPIApi* | [**getDocument**](docs/DocumentsAPIApi.md#getdocument) | **GET** /api/ws/v1/sources/{content_source_id}/documents/{document_id} | Retrieves a document by ID from the specified content source
-*DocumentsAPIApi* | [**indexDocuments**](docs/DocumentsAPIApi.md#indexdocuments) | **POST** /api/ws/v1/sources/{content_source_id}/documents/bulk_create | Indexes one or more new documents into a custom content source, or updates one or more existing documents
-*ExternalIdentitiesAPIApi* | [**createExternalIdentity**](docs/ExternalIdentitiesAPIApi.md#createexternalidentity) | **POST** /api/ws/v1/sources/{content_source_id}/external_identities | Adds a new external identity
-*ExternalIdentitiesAPIApi* | [**deleteExternalIdentity**](docs/ExternalIdentitiesAPIApi.md#deleteexternalidentity) | **DELETE** /api/ws/v1/sources/{content_source_id}/external_identities/{user} | Deletes an external identity
-*ExternalIdentitiesAPIApi* | [**getExternalIdentity**](docs/ExternalIdentitiesAPIApi.md#getexternalidentity) | **GET** /api/ws/v1/sources/{content_source_id}/external_identities/{user} | Retrieves an external identity
-*ExternalIdentitiesAPIApi* | [**listExternalIdentities**](docs/ExternalIdentitiesAPIApi.md#listexternalidentities) | **GET** /api/ws/v1/sources/{content_source_id}/external_identities | Retrieves all external identities
-*ExternalIdentitiesAPIApi* | [**putExternalIdentity**](docs/ExternalIdentitiesAPIApi.md#putexternalidentity) | **PUT** /api/ws/v1/sources/{content_source_id}/external_identities/{user} | Updates an external identity
-*PermissionsAPIApi* | [**addUserPermissions**](docs/PermissionsAPIApi.md#adduserpermissions) | **POST** /api/ws/v1/sources/{content_source_id}/permissions/{user}/add | Adds one or more new permissions atop existing permissions
-*PermissionsAPIApi* | [**getUserPermissions**](docs/PermissionsAPIApi.md#getuserpermissions) | **GET** /api/ws/v1/sources/{content_source_id}/permissions/{user} | Lists all permissions for one user
-*PermissionsAPIApi* | [**listPermissions**](docs/PermissionsAPIApi.md#listpermissions) | **GET** /api/ws/v1/sources/{content_source_id}/permissions | Lists all permissions for all users
-*PermissionsAPIApi* | [**putUserPermissions**](docs/PermissionsAPIApi.md#putuserpermissions) | **PUT** /api/ws/v1/sources/{content_source_id}/permissions/{user} | Creates a new set of permissions or over-writes all existing permissions
-*PermissionsAPIApi* | [**removeUserPermissions**](docs/PermissionsAPIApi.md#removeuserpermissions) | **POST** /api/ws/v1/sources/{content_source_id}/permissions/{user}/remove | Removes one or more permissions from an existing set of permissions
-*SearchAPIApi* | [**search**](docs/SearchAPIApi.md#search) | **POST** /api/ws/v1/search | Search across available sources with various query tuning options
-*SyncJobsAPIApi* | [**commandSyncJobs**](docs/SyncJobsAPIApi.md#commandsyncjobs) | **POST** /api/ws/v1/sources/{content_source_id}/sync/jobs | Issue commands to a Content Source's sync jobs
-*SynonymsAPIApi* | [**createBatchSynonymSets**](docs/SynonymsAPIApi.md#createbatchsynonymsets) | **POST** /api/ws/v1/synonyms | Create a batch of synonym sets
-*SynonymsAPIApi* | [**deleteSynonymSet**](docs/SynonymsAPIApi.md#deletesynonymset) | **DELETE** /api/ws/v1/synonyms/{synonym_set_id} | Delete a synonym set
-*SynonymsAPIApi* | [**getSynonymSet**](docs/SynonymsAPIApi.md#getsynonymset) | **GET** /api/ws/v1/synonyms/{synonym_set_id} | Retrieve a synonym set by ID
-*SynonymsAPIApi* | [**listSynonymSets**](docs/SynonymsAPIApi.md#listsynonymsets) | **GET** /api/ws/v1/synonyms | Retrieves all synonym sets
-*SynonymsAPIApi* | [**putSynonymSet**](docs/SynonymsAPIApi.md#putsynonymset) | **PUT** /api/ws/v1/synonyms/{synonym_set_id} | Update a synonym set
-
-<a name="documentation-for-models"></a>
-## Documentation for Models
-
- - [org.elasticsearch.workplacesearch.models.AbstractSyncCommand](docs/AbstractSyncCommand.md)
- - [org.elasticsearch.workplacesearch.models.AnalyticsEvent](docs/AnalyticsEvent.md)
- - [org.elasticsearch.workplacesearch.models.AnyOfboostFunctionalRequirements](docs/AnyOfboostFunctionalRequirements.md)
- - [org.elasticsearch.workplacesearch.models.AnyOfboostItemCenter](docs/AnyOfboostItemCenter.md)
- - [org.elasticsearch.workplacesearch.models.AnyOfboostProximityRequirements](docs/AnyOfboostProximityRequirements.md)
- - [org.elasticsearch.workplacesearch.models.AnyOfboostValueRequirements](docs/AnyOfboostValueRequirements.md)
- - [org.elasticsearch.workplacesearch.models.AnyOfeventClickRequirements](docs/AnyOfeventClickRequirements.md)
- - [org.elasticsearch.workplacesearch.models.AnyOfeventFeedbackRequirements](docs/AnyOfeventFeedbackRequirements.md)
- - [org.elasticsearch.workplacesearch.models.AnyOffacetItem](docs/AnyOffacetItem.md)
- - [org.elasticsearch.workplacesearch.models.AnyOffacetRangeItem](docs/AnyOffacetRangeItem.md)
- - [org.elasticsearch.workplacesearch.models.AnyOfgeoPoint](docs/AnyOfgeoPoint.md)
- - [org.elasticsearch.workplacesearch.models.AnyOfsyncJobsCommand](docs/AnyOfsyncJobsCommand.md)
- - [org.elasticsearch.workplacesearch.models.ArrayOrSingularFilterClausesOrFilter](docs/ArrayOrSingularFilterClausesOrFilter.md)
- - [org.elasticsearch.workplacesearch.models.ArrayOrSingularFilterValue](docs/ArrayOrSingularFilterValue.md)
- - [org.elasticsearch.workplacesearch.models.AutomaticQueryRefinementDetailsResponse](docs/AutomaticQueryRefinementDetailsResponse.md)
- - [org.elasticsearch.workplacesearch.models.BatchSynonymSetsResponse](docs/BatchSynonymSetsResponse.md)
- - [org.elasticsearch.workplacesearch.models.BoostFunctionalRequirements](docs/BoostFunctionalRequirements.md)
- - [org.elasticsearch.workplacesearch.models.BoostIsFunctionalType](docs/BoostIsFunctionalType.md)
- - [org.elasticsearch.workplacesearch.models.BoostIsProximityType](docs/BoostIsProximityType.md)
- - [org.elasticsearch.workplacesearch.models.BoostIsValueType](docs/BoostIsValueType.md)
- - [org.elasticsearch.workplacesearch.models.BoostItem](docs/BoostItem.md)
- - [org.elasticsearch.workplacesearch.models.BoostProximityRequirements](docs/BoostProximityRequirements.md)
- - [org.elasticsearch.workplacesearch.models.BoostValueItemtype](docs/BoostValueItemtype.md)
- - [org.elasticsearch.workplacesearch.models.BoostValueRequirements](docs/BoostValueRequirements.md)
- - [org.elasticsearch.workplacesearch.models.BulkDocuments](docs/BulkDocuments.md)
- - [org.elasticsearch.workplacesearch.models.BulkSynonymSets](docs/BulkSynonymSets.md)
- - [org.elasticsearch.workplacesearch.models.ContentSource](docs/ContentSource.md)
- - [org.elasticsearch.workplacesearch.models.ContentSourceAutomaticQueryRefinement](docs/ContentSourceAutomaticQueryRefinement.md)
- - [org.elasticsearch.workplacesearch.models.ContentSourceAutomaticQueryRefinements](docs/ContentSourceAutomaticQueryRefinements.md)
- - [org.elasticsearch.workplacesearch.models.ContentSourceCreateDefinition](docs/ContentSourceCreateDefinition.md)
- - [org.elasticsearch.workplacesearch.models.ContentSourceDetail](docs/ContentSourceDetail.md)
- - [org.elasticsearch.workplacesearch.models.ContentSourceDisplay](docs/ContentSourceDisplay.md)
- - [org.elasticsearch.workplacesearch.models.ContentSourceDisplayDetail](docs/ContentSourceDisplayDetail.md)
- - [org.elasticsearch.workplacesearch.models.ContentSourceEnabledAutomaticQueryRefinement](docs/ContentSourceEnabledAutomaticQueryRefinement.md)
- - [org.elasticsearch.workplacesearch.models.ContentSourceFacet](docs/ContentSourceFacet.md)
- - [org.elasticsearch.workplacesearch.models.ContentSourceFacets](docs/ContentSourceFacets.md)
- - [org.elasticsearch.workplacesearch.models.ContentSourceIconDefinition](docs/ContentSourceIconDefinition.md)
- - [org.elasticsearch.workplacesearch.models.ContentSourceIndexing](docs/ContentSourceIndexing.md)
- - [org.elasticsearch.workplacesearch.models.ContentSourceIndexingFeatures](docs/ContentSourceIndexingFeatures.md)
- - [org.elasticsearch.workplacesearch.models.ContentSourceIndexingFeaturesThumbnails](docs/ContentSourceIndexingFeaturesThumbnails.md)
- - [org.elasticsearch.workplacesearch.models.ContentSourceIndexingResponse](docs/ContentSourceIndexingResponse.md)
- - [org.elasticsearch.workplacesearch.models.ContentSourceIndexingRule](docs/ContentSourceIndexingRule.md)
- - [org.elasticsearch.workplacesearch.models.ContentSourceJobTypeWindow](docs/ContentSourceJobTypeWindow.md)
- - [org.elasticsearch.workplacesearch.models.ContentSourcePartialCreateResponse](docs/ContentSourcePartialCreateResponse.md)
- - [org.elasticsearch.workplacesearch.models.ContentSourcePartialUpdateResponse](docs/ContentSourcePartialUpdateResponse.md)
- - [org.elasticsearch.workplacesearch.models.ContentSourceSchedule](docs/ContentSourceSchedule.md)
- - [org.elasticsearch.workplacesearch.models.ContentSourceScheduleEstimates](docs/ContentSourceScheduleEstimates.md)
- - [org.elasticsearch.workplacesearch.models.ContentSourceScheduleResponse](docs/ContentSourceScheduleResponse.md)
- - [org.elasticsearch.workplacesearch.models.ContentSourceScheduleResponseEstimates](docs/ContentSourceScheduleResponseEstimates.md)
- - [org.elasticsearch.workplacesearch.models.ContentSourceSchema](docs/ContentSourceSchema.md)
- - [org.elasticsearch.workplacesearch.models.ContentSourceUpdateDefinition](docs/ContentSourceUpdateDefinition.md)
- - [org.elasticsearch.workplacesearch.models.CreatedSynonymSetResponse](docs/CreatedSynonymSetResponse.md)
- - [org.elasticsearch.workplacesearch.models.DeleteDocumentsByQueryResponse](docs/DeleteDocumentsByQueryResponse.md)
- - [org.elasticsearch.workplacesearch.models.DeleteExternalIdentitiesResponse](docs/DeleteExternalIdentitiesResponse.md)
- - [org.elasticsearch.workplacesearch.models.Document](docs/Document.md)
- - [org.elasticsearch.workplacesearch.models.DocumentBulkCreateResponse](docs/DocumentBulkCreateResponse.md)
- - [org.elasticsearch.workplacesearch.models.DocumentBulkCreateResponseResults](docs/DocumentBulkCreateResponseResults.md)
- - [org.elasticsearch.workplacesearch.models.DocumentBulkDeleteResponse](docs/DocumentBulkDeleteResponse.md)
- - [org.elasticsearch.workplacesearch.models.DocumentBulkDeleteResponseResults](docs/DocumentBulkDeleteResponseResults.md)
- - [org.elasticsearch.workplacesearch.models.DocumentIds](docs/DocumentIds.md)
- - [org.elasticsearch.workplacesearch.models.DocumentsDeleteDefinition](docs/DocumentsDeleteDefinition.md)
- - [org.elasticsearch.workplacesearch.models.DocumentsDeleteDefinitionFilters](docs/DocumentsDeleteDefinitionFilters.md)
- - [org.elasticsearch.workplacesearch.models.Errors](docs/Errors.md)
- - [org.elasticsearch.workplacesearch.models.ErrorsResponse](docs/ErrorsResponse.md)
- - [org.elasticsearch.workplacesearch.models.EventClickRequirements](docs/EventClickRequirements.md)
- - [org.elasticsearch.workplacesearch.models.EventFeedbackRequirements](docs/EventFeedbackRequirements.md)
- - [org.elasticsearch.workplacesearch.models.EventIsClickType](docs/EventIsClickType.md)
- - [org.elasticsearch.workplacesearch.models.EventIsFeedbackType](docs/EventIsFeedbackType.md)
- - [org.elasticsearch.workplacesearch.models.ExternalId](docs/ExternalId.md)
- - [org.elasticsearch.workplacesearch.models.ExternalIdentity](docs/ExternalIdentity.md)
- - [org.elasticsearch.workplacesearch.models.FacetItem](docs/FacetItem.md)
- - [org.elasticsearch.workplacesearch.models.FacetRange](docs/FacetRange.md)
- - [org.elasticsearch.workplacesearch.models.FacetRangeItem](docs/FacetRangeItem.md)
- - [org.elasticsearch.workplacesearch.models.FacetSort](docs/FacetSort.md)
- - [org.elasticsearch.workplacesearch.models.FacetValue](docs/FacetValue.md)
- - [org.elasticsearch.workplacesearch.models.Filter](docs/Filter.md)
- - [org.elasticsearch.workplacesearch.models.FilterClauses](docs/FilterClauses.md)
- - [org.elasticsearch.workplacesearch.models.FilterClausesOrFilter](docs/FilterClausesOrFilter.md)
- - [org.elasticsearch.workplacesearch.models.FilterValue](docs/FilterValue.md)
- - [org.elasticsearch.workplacesearch.models.GeoDistanceFilter](docs/GeoDistanceFilter.md)
- - [org.elasticsearch.workplacesearch.models.GeoPoint](docs/GeoPoint.md)
- - [org.elasticsearch.workplacesearch.models.GeoRangeFilter](docs/GeoRangeFilter.md)
- - [org.elasticsearch.workplacesearch.models.GeoUnitEnum](docs/GeoUnitEnum.md)
- - [org.elasticsearch.workplacesearch.models.InlineResponse400](docs/InlineResponse400.md)
- - [org.elasticsearch.workplacesearch.models.InlineResponse4001](docs/InlineResponse4001.md)
- - [org.elasticsearch.workplacesearch.models.InterruptSyncCommand](docs/InterruptSyncCommand.md)
- - [org.elasticsearch.workplacesearch.models.InterruptedSyncJobs](docs/InterruptedSyncJobs.md)
- - [org.elasticsearch.workplacesearch.models.LastUpdated](docs/LastUpdated.md)
- - [org.elasticsearch.workplacesearch.models.ListContentSourcesResponse](docs/ListContentSourcesResponse.md)
- - [org.elasticsearch.workplacesearch.models.ListExternalIdentitiesResponse](docs/ListExternalIdentitiesResponse.md)
- - [org.elasticsearch.workplacesearch.models.ListPermissionsResponse](docs/ListPermissionsResponse.md)
- - [org.elasticsearch.workplacesearch.models.ListSynonymSetResponse](docs/ListSynonymSetResponse.md)
- - [org.elasticsearch.workplacesearch.models.ListSynonymSetResponseMeta](docs/ListSynonymSetResponseMeta.md)
- - [org.elasticsearch.workplacesearch.models.ListSynonymSetResponseMetaFilter](docs/ListSynonymSetResponseMetaFilter.md)
- - [org.elasticsearch.workplacesearch.models.ListSynonymSetResponseMetaSort](docs/ListSynonymSetResponseMetaSort.md)
- - [org.elasticsearch.workplacesearch.models.MetaPage](docs/MetaPage.md)
- - [org.elasticsearch.workplacesearch.models.MetaPagePage](docs/MetaPagePage.md)
- - [org.elasticsearch.workplacesearch.models.OneOfarrayOrSingularFilterClausesOrFilter](docs/OneOfarrayOrSingularFilterClausesOrFilter.md)
- - [org.elasticsearch.workplacesearch.models.OneOfarrayOrSingularFilterValue](docs/OneOfarrayOrSingularFilterValue.md)
- - [org.elasticsearch.workplacesearch.models.OneOfboostValueItemtype](docs/OneOfboostValueItemtype.md)
- - [org.elasticsearch.workplacesearch.models.OneOffacetRangeItemFrom](docs/OneOffacetRangeItemFrom.md)
- - [org.elasticsearch.workplacesearch.models.OneOffacetRangeItemTo](docs/OneOffacetRangeItemTo.md)
- - [org.elasticsearch.workplacesearch.models.OneOffilterClausesOrFilter](docs/OneOffilterClausesOrFilter.md)
- - [org.elasticsearch.workplacesearch.models.OneOffilterValue](docs/OneOffilterValue.md)
- - [org.elasticsearch.workplacesearch.models.OneOfinlineResponse400](docs/OneOfinlineResponse400.md)
- - [org.elasticsearch.workplacesearch.models.OneOfinlineResponse4001](docs/OneOfinlineResponse4001.md)
- - [org.elasticsearch.workplacesearch.models.OneOflistSynonymSetResponseMetaFilterTerms](docs/OneOflistSynonymSetResponseMetaFilterTerms.md)
- - [org.elasticsearch.workplacesearch.models.OneOfsearchApiQuerySort](docs/OneOfsearchApiQuerySort.md)
- - [org.elasticsearch.workplacesearch.models.OneOfsearchFacetResponseItemDataFrom](docs/OneOfsearchFacetResponseItemDataFrom.md)
- - [org.elasticsearch.workplacesearch.models.OneOfsearchFacetResponseItemDataTo](docs/OneOfsearchFacetResponseItemDataTo.md)
- - [org.elasticsearch.workplacesearch.models.OneOfsearchFacetResponseItemDataValue](docs/OneOfsearchFacetResponseItemDataValue.md)
- - [org.elasticsearch.workplacesearch.models.OneOfsearchFacetsResponse](docs/OneOfsearchFacetsResponse.md)
- - [org.elasticsearch.workplacesearch.models.OneOfsyncJobsCommandResponseResults](docs/OneOfsyncJobsCommandResponseResults.md)
- - [org.elasticsearch.workplacesearch.models.OneOfsynonymsCreateDefinition](docs/OneOfsynonymsCreateDefinition.md)
- - [org.elasticsearch.workplacesearch.models.OneOfsynonymsTermsFilter](docs/OneOfsynonymsTermsFilter.md)
- - [org.elasticsearch.workplacesearch.models.Permission](docs/Permission.md)
- - [org.elasticsearch.workplacesearch.models.Permissions](docs/Permissions.md)
- - [org.elasticsearch.workplacesearch.models.PermissionsUser](docs/PermissionsUser.md)
- - [org.elasticsearch.workplacesearch.models.QueryRefinementItem](docs/QueryRefinementItem.md)
- - [org.elasticsearch.workplacesearch.models.Range](docs/Range.md)
- - [org.elasticsearch.workplacesearch.models.RangeFilter](docs/RangeFilter.md)
- - [org.elasticsearch.workplacesearch.models.RecordDeletedResponse](docs/RecordDeletedResponse.md)
- - [org.elasticsearch.workplacesearch.models.SearchApiEndpointResponse](docs/SearchApiEndpointResponse.md)
- - [org.elasticsearch.workplacesearch.models.SearchApiEndpointResponseMeta](docs/SearchApiEndpointResponseMeta.md)
- - [org.elasticsearch.workplacesearch.models.SearchApiMetaContentSource](docs/SearchApiMetaContentSource.md)
- - [org.elasticsearch.workplacesearch.models.SearchApiMetaContentSources](docs/SearchApiMetaContentSources.md)
- - [org.elasticsearch.workplacesearch.models.SearchApiQuery](docs/SearchApiQuery.md)
- - [org.elasticsearch.workplacesearch.models.SearchApiQueryPage](docs/SearchApiQueryPage.md)
- - [org.elasticsearch.workplacesearch.models.SearchApiQueryRaw](docs/SearchApiQueryRaw.md)
- - [org.elasticsearch.workplacesearch.models.SearchApiQueryRefinement](docs/SearchApiQueryRefinement.md)
- - [org.elasticsearch.workplacesearch.models.SearchApiQueryResultFields](docs/SearchApiQueryResultFields.md)
- - [org.elasticsearch.workplacesearch.models.SearchApiQuerySearchFields](docs/SearchApiQuerySearchFields.md)
- - [org.elasticsearch.workplacesearch.models.SearchApiQuerySnippet](docs/SearchApiQuerySnippet.md)
- - [org.elasticsearch.workplacesearch.models.SearchApiResultItem](docs/SearchApiResultItem.md)
- - [org.elasticsearch.workplacesearch.models.SearchApiResultItemMeta](docs/SearchApiResultItemMeta.md)
- - [org.elasticsearch.workplacesearch.models.SearchFacetResponseItem](docs/SearchFacetResponseItem.md)
- - [org.elasticsearch.workplacesearch.models.SearchFacetResponseItemData](docs/SearchFacetResponseItemData.md)
- - [org.elasticsearch.workplacesearch.models.SearchFacetsResponse](docs/SearchFacetsResponse.md)
- - [org.elasticsearch.workplacesearch.models.SearchGroup](docs/SearchGroup.md)
- - [org.elasticsearch.workplacesearch.models.SingleDocumentResponse](docs/SingleDocumentResponse.md)
- - [org.elasticsearch.workplacesearch.models.SingleSynonymSet](docs/SingleSynonymSet.md)
- - [org.elasticsearch.workplacesearch.models.SingleSynonymSetObject](docs/SingleSynonymSetObject.md)
- - [org.elasticsearch.workplacesearch.models.SingleSynonymSetResponse](docs/SingleSynonymSetResponse.md)
- - [org.elasticsearch.workplacesearch.models.Sort](docs/Sort.md)
- - [org.elasticsearch.workplacesearch.models.StartSyncCommand](docs/StartSyncCommand.md)
- - [org.elasticsearch.workplacesearch.models.StartedSyncJobs](docs/StartedSyncJobs.md)
- - [org.elasticsearch.workplacesearch.models.SyncJobDefinition](docs/SyncJobDefinition.md)
- - [org.elasticsearch.workplacesearch.models.SyncJobsCommand](docs/SyncJobsCommand.md)
- - [org.elasticsearch.workplacesearch.models.SyncJobsCommandResponse](docs/SyncJobsCommandResponse.md)
- - [org.elasticsearch.workplacesearch.models.SynonymsCreateDefinition](docs/SynonymsCreateDefinition.md)
- - [org.elasticsearch.workplacesearch.models.SynonymsFilter](docs/SynonymsFilter.md)
- - [org.elasticsearch.workplacesearch.models.SynonymsListDefinition](docs/SynonymsListDefinition.md)
- - [org.elasticsearch.workplacesearch.models.SynonymsPage](docs/SynonymsPage.md)
- - [org.elasticsearch.workplacesearch.models.SynonymsSort](docs/SynonymsSort.md)
- - [org.elasticsearch.workplacesearch.models.SynonymsTermsFilter](docs/SynonymsTermsFilter.md)
- - [org.elasticsearch.workplacesearch.models.SynonymsUpdateDefinition](docs/SynonymsUpdateDefinition.md)
- - [org.elasticsearch.workplacesearch.models.TriggersBlocklistDefinition](docs/TriggersBlocklistDefinition.md)
- - [org.elasticsearch.workplacesearch.models.TriggersBlocklistWrapperDefinition](docs/TriggersBlocklistWrapperDefinition.md)
- - [org.elasticsearch.workplacesearch.models.UploadIconsResponse](docs/UploadIconsResponse.md)
- - [org.elasticsearch.workplacesearch.models.UploadIconsResponseResults](docs/UploadIconsResponseResults.md)
- - [org.elasticsearch.workplacesearch.models.WhoamiResponse](docs/WhoamiResponse.md)
-
-<a name="documentation-for-authorization"></a>
-## Documentation for Authorization
-
-<a name="basic_auth"></a>
-### basic_auth
-
-- **Type**: HTTP basic authentication
-
-<a name="bearer_auth"></a>
-### bearer_auth
+ - Is the code generated without errors from unchanged json?
+ - Does the generated code compile?
+ - Are file names looking right?
+ - Are folder paths looking right?
+ - Is the tool easily configured? (As in: do we have enough configuration options provided to generate the code in the shape we want)
+ - Are the tool templates customizable?
+ - List the problems you found. For each, specify if it could be fixed by either of:
+   - changing the input JSON
+   - post-processing generated files
+   - anything else
+ - Is the code clean and idiomatic?
 
 
+## Answers
+
+| Q 	| swagger-codegen 	| openapi-generator 	|
+|---|-----------------|-------------------|
+| Is the code generated without errors from unchanged json?|yes|no|
+|Does the generated code compile?|no|no|
+|Are file names looking right?|no|yes|
+|Are folder paths looking right?|yes|yes|
+|Is the tool easily configured? (As in: do we have enough configuration options provided to generate the code in the shape we want)|yes|yes|
+|Are the tool templates customizable?|yes|yes|
+|Is the code clean and idiomatic?|no|no|
+
+### Problems
+
+#### swagger-codegen
+
+| Description | Fixable? |
+|-------------|----------|
+| 1. Model file names are `snake_case` | Perhaps, by post-processing or getting a newer tool revision, or just fixing the tool code itself |
+| 2.  ||
