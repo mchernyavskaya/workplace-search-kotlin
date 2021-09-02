@@ -22,8 +22,8 @@ Adds a new external identity
 ### Example
 ```kotlin
 // Import classes:
-//import org.elasticsearch.workplacesearch.infrastructure.*
-//import org.elasticsearch.workplacesearch.models.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
 
 val apiInstance = ExternalIdentitiesAPIApi()
 val contentSourceId : kotlin.String = contentSourceId_example // kotlin.String | Unique ID for a Custom API source, provided upon creation of a Custom API Source
@@ -74,8 +74,8 @@ Deletes an external identity
 ### Example
 ```kotlin
 // Import classes:
-//import org.elasticsearch.workplacesearch.infrastructure.*
-//import org.elasticsearch.workplacesearch.models.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
 
 val apiInstance = ExternalIdentitiesAPIApi()
 val contentSourceId : kotlin.String = contentSourceId_example // kotlin.String | Unique ID for a Custom API source, provided upon creation of a Custom API Source
@@ -126,8 +126,8 @@ Retrieves an external identity
 ### Example
 ```kotlin
 // Import classes:
-//import org.elasticsearch.workplacesearch.infrastructure.*
-//import org.elasticsearch.workplacesearch.models.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
 
 val apiInstance = ExternalIdentitiesAPIApi()
 val contentSourceId : kotlin.String = contentSourceId_example // kotlin.String | Unique ID for a Custom API source, provided upon creation of a Custom API Source
@@ -178,8 +178,8 @@ Retrieves all external identities
 ### Example
 ```kotlin
 // Import classes:
-//import org.elasticsearch.workplacesearch.infrastructure.*
-//import org.elasticsearch.workplacesearch.models.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
 
 val apiInstance = ExternalIdentitiesAPIApi()
 val contentSourceId : kotlin.String = contentSourceId_example // kotlin.String | Unique ID for a Custom API source, provided upon creation of a Custom API Source
@@ -232,8 +232,8 @@ Updates an external identity
 ### Example
 ```kotlin
 // Import classes:
-//import org.elasticsearch.workplacesearch.infrastructure.*
-//import org.elasticsearch.workplacesearch.models.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
 
 val apiInstance = ExternalIdentitiesAPIApi()
 val contentSourceId : kotlin.String = contentSourceId_example // kotlin.String | Unique ID for a Custom API source, provided upon creation of a Custom API Source

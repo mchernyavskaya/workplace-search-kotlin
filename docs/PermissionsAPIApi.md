@@ -22,8 +22,8 @@ Add one or more permission for a given user. Permissions are added atop the exis
 ### Example
 ```kotlin
 // Import classes:
-//import org.elasticsearch.workplacesearch.infrastructure.*
-//import org.elasticsearch.workplacesearch.models.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
 
 val apiInstance = PermissionsAPIApi()
 val contentSourceId : kotlin.String = contentSourceId_example // kotlin.String | Unique ID for a Custom API source, provided upon creation of a Custom API Source
@@ -76,8 +76,8 @@ List permissions for a user
 ### Example
 ```kotlin
 // Import classes:
-//import org.elasticsearch.workplacesearch.infrastructure.*
-//import org.elasticsearch.workplacesearch.models.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
 
 val apiInstance = PermissionsAPIApi()
 val contentSourceId : kotlin.String = contentSourceId_example // kotlin.String | Unique ID for a Custom API source, provided upon creation of a Custom API Source
@@ -128,8 +128,8 @@ List all permissions for all users
 ### Example
 ```kotlin
 // Import classes:
-//import org.elasticsearch.workplacesearch.infrastructure.*
-//import org.elasticsearch.workplacesearch.models.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
 
 val apiInstance = PermissionsAPIApi()
 val contentSourceId : kotlin.String = contentSourceId_example // kotlin.String | Unique ID for a Custom API source, provided upon creation of a Custom API Source
@@ -182,8 +182,8 @@ Create a set of permissions or overwrite existing permissions
 ### Example
 ```kotlin
 // Import classes:
-//import org.elasticsearch.workplacesearch.infrastructure.*
-//import org.elasticsearch.workplacesearch.models.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
 
 val apiInstance = PermissionsAPIApi()
 val contentSourceId : kotlin.String = contentSourceId_example // kotlin.String | Unique ID for a Custom API source, provided upon creation of a Custom API Source
@@ -236,8 +236,8 @@ Remove one or more permission for a given user
 ### Example
 ```kotlin
 // Import classes:
-//import org.elasticsearch.workplacesearch.infrastructure.*
-//import org.elasticsearch.workplacesearch.models.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
 
 val apiInstance = PermissionsAPIApi()
 val contentSourceId : kotlin.String = contentSourceId_example // kotlin.String | Unique ID for a Custom API source, provided upon creation of a Custom API Source

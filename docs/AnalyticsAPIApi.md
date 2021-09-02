@@ -18,8 +18,8 @@ Capture Analytic events for click and feedback
 ### Example
 ```kotlin
 // Import classes:
-//import org.elasticsearch.workplacesearch.infrastructure.*
-//import org.elasticsearch.workplacesearch.models.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
 
 val apiInstance = AnalyticsAPIApi()
 val analyticsEvent : AnalyticsEvent =  // AnalyticsEvent | 
