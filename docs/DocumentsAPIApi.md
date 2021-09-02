@@ -4,10 +4,10 @@ All URIs are relative to *{schemes}://{host}:{port}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteDocuments**](git/workplace-search-kotlin/docs/DocumentsAPIApi.md#deleteDocuments) | **POST** /api/ws/v1/sources/{content_source_id}/documents/bulk_destroy | Deletes a list of documents from a custom content source
-[**deleteDocumentsByQuery**](git/workplace-search-kotlin/docs/DocumentsAPIApi.md#deleteDocumentsByQuery) | **DELETE** /api/ws/v1/sources/{content_source_id}/documents | Deletes documents by query in a custom content source
-[**getDocument**](git/workplace-search-kotlin/docs/DocumentsAPIApi.md#getDocument) | **GET** /api/ws/v1/sources/{content_source_id}/documents/{document_id} | Retrieves a document by ID from the specified content source
-[**indexDocuments**](git/workplace-search-kotlin/docs/DocumentsAPIApi.md#indexDocuments) | **POST** /api/ws/v1/sources/{content_source_id}/documents/bulk_create | Indexes one or more new documents into a custom content source, or updates one or more existing documents
+[**deleteDocuments**](DocumentsAPIApi.md#deleteDocuments) | **POST** /api/ws/v1/sources/{content_source_id}/documents/bulk_destroy | Deletes a list of documents from a custom content source
+[**deleteDocumentsByQuery**](DocumentsAPIApi.md#deleteDocumentsByQuery) | **DELETE** /api/ws/v1/sources/{content_source_id}/documents | Deletes documents by query in a custom content source
+[**getDocument**](DocumentsAPIApi.md#getDocument) | **GET** /api/ws/v1/sources/{content_source_id}/documents/{document_id} | Retrieves a document by ID from the specified content source
+[**indexDocuments**](DocumentsAPIApi.md#indexDocuments) | **POST** /api/ws/v1/sources/{content_source_id}/documents/bulk_create | Indexes one or more new documents into a custom content source, or updates one or more existing documents
 
 <a name="deleteDocuments"></a>
 # **deleteDocuments**
@@ -20,8 +20,8 @@ Remove documents from a Custom API Source
 ### Example
 ```kotlin
 // Import classes:
-//import io.swagger.client.infrastructure.*
-//import org.elasticsearch.workplace-search.model.*;
+//import org.elasticsearch.workplacesearch.infrastructure.*
+//import org.elasticsearch.workplacesearch.models.*;
 
 val apiInstance = DocumentsAPIApi()
 val body : kotlin.Array<ExternalId> =  // kotlin.Array<ExternalId> | 
@@ -69,8 +69,8 @@ Deletes documents by query in a custom content source
 ### Example
 ```kotlin
 // Import classes:
-//import io.swagger.client.infrastructure.*
-//import org.elasticsearch.workplace-search.model.*;
+//import org.elasticsearch.workplacesearch.infrastructure.*
+//import org.elasticsearch.workplacesearch.models.*;
 
 val apiInstance = DocumentsAPIApi()
 val contentSourceId : kotlin.String = contentSourceId_example // kotlin.String | Unique ID for a Custom API source, provided upon creation of a Custom API Source
@@ -118,8 +118,8 @@ Retrieves a document by ID from the specified content source
 ### Example
 ```kotlin
 // Import classes:
-//import io.swagger.client.infrastructure.*
-//import org.elasticsearch.workplace-search.model.*;
+//import org.elasticsearch.workplacesearch.infrastructure.*
+//import org.elasticsearch.workplacesearch.models.*;
 
 val apiInstance = DocumentsAPIApi()
 val contentSourceId : kotlin.String = contentSourceId_example // kotlin.String | Unique ID for a Custom API source, provided upon creation of a Custom API Source
@@ -167,8 +167,8 @@ Indexes one or more new documents into a custom content source, or updates one o
 ### Example
 ```kotlin
 // Import classes:
-//import io.swagger.client.infrastructure.*
-//import org.elasticsearch.workplace-search.model.*;
+//import org.elasticsearch.workplacesearch.infrastructure.*
+//import org.elasticsearch.workplacesearch.models.*;
 
 val apiInstance = DocumentsAPIApi()
 val body : kotlin.Array<Document> =  // kotlin.Array<Document> | 
@@ -189,7 +189,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**kotlin.Array&lt;Document&gt;**](git/workplace-search-kotlin/docs/Document.md)|  |
+ **body** | [**kotlin.Array&lt;Document&gt;**](Document.md)|  |
  **contentSourceId** | **kotlin.String**| Unique ID for a Custom API source, provided upon creation of a Custom API Source |
 
 ### Return type

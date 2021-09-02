@@ -4,9 +4,9 @@ All URIs are relative to *{schemes}://{host}:{port}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCurrentUser**](git/workplace-search-kotlin/docsetCurrentUser) | **GET** /api/ws/v1/whoami | Get the authenticated user
-[**getTriggersBlocklist**](git/workplace-search-kotlin/docsetTriggersBlocklist) | **GET** /api/ws/v1/automatic_query_refinement | Get current triggers blocklist
-[**putTriggersBlocklist**](git/workplace-search-kotlin/docsutTriggersBlocklist) | **PUT** /api/ws/v1/automatic_query_refinement | Update current triggers blocklist
+[**getCurrentUser**](DefaultApi.md#getCurrentUser) | **GET** /api/ws/v1/whoami | Get the authenticated user
+[**getTriggersBlocklist**](DefaultApi.md#getTriggersBlocklist) | **GET** /api/ws/v1/automatic_query_refinement | Get current triggers blocklist
+[**putTriggersBlocklist**](DefaultApi.md#putTriggersBlocklist) | **PUT** /api/ws/v1/automatic_query_refinement | Update current triggers blocklist
 
 <a name="getCurrentUser"></a>
 # **getCurrentUser**
@@ -19,8 +19,8 @@ Get the authenticated user
 ### Example
 ```kotlin
 // Import classes:
-//import io.swagger.client.infrastructure.*
-//import org.elasticsearch.workplace-search.model.*;
+//import org.elasticsearch.workplacesearch.infrastructure.*
+//import org.elasticsearch.workplacesearch.models.*;
 
 val apiInstance = DefaultApi()
 val getToken : kotlin.Boolean = true // kotlin.Boolean | Whether or not to include an access token in the response.
@@ -66,8 +66,8 @@ Get current triggers blocklist
 ### Example
 ```kotlin
 // Import classes:
-//import io.swagger.client.infrastructure.*
-//import org.elasticsearch.workplace-search.model.*;
+//import org.elasticsearch.workplacesearch.infrastructure.*
+//import org.elasticsearch.workplacesearch.models.*;
 
 val apiInstance = DefaultApi()
 try {
@@ -109,8 +109,8 @@ Update current triggers blocklist
 ### Example
 ```kotlin
 // Import classes:
-//import io.swagger.client.infrastructure.*
-//import org.elasticsearch.workplace-search.model.*;
+//import org.elasticsearch.workplacesearch.infrastructure.*
+//import org.elasticsearch.workplacesearch.models.*;
 
 val apiInstance = DefaultApi()
 try {

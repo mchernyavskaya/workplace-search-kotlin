@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**errors** | [**Errors**](git/workplace-search-kotlin/docs/Errors.md) |  | 
+**errors** | [**Errors**](Errors.md) |  | 

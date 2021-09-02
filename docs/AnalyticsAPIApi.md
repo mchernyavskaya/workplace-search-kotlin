@@ -4,7 +4,7 @@ All URIs are relative to *{schemes}://{host}:{port}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createAnalyticsEvent**](git/workplace-search-kotlin/docs/AnalyticsAPIApi.md#createAnalyticsEvent) | **POST** /api/ws/v1/analytics/event | Capture click and feedback analytic events
+[**createAnalyticsEvent**](AnalyticsAPIApi.md#createAnalyticsEvent) | **POST** /api/ws/v1/analytics/event | Capture click and feedback analytic events
 
 <a name="createAnalyticsEvent"></a>
 # **createAnalyticsEvent**
@@ -17,8 +17,8 @@ Capture Analytic events for click and feedback
 ### Example
 ```kotlin
 // Import classes:
-//import io.swagger.client.infrastructure.*
-//import org.elasticsearch.workplace-search.model.*;
+//import org.elasticsearch.workplacesearch.infrastructure.*
+//import org.elasticsearch.workplacesearch.models.*;
 
 val apiInstance = AnalyticsAPIApi()
 val body : AnalyticsEvent =  // AnalyticsEvent | 

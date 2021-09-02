@@ -4,11 +4,11 @@ All URIs are relative to *{schemes}://{host}:{port}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addUserPermissions**](git/workplace-search-kotlin/docs/PermissionsAPIApi.md#addUserPermissions) | **POST** /api/ws/v1/sources/{content_source_id}/permissions/{user}/add | Adds one or more new permissions atop existing permissions
-[**getUserPermissions**](git/workplace-search-kotlin/docs/PermissionsAPIApi.md#getUserPermissions) | **GET** /api/ws/v1/sources/{content_source_id}/permissions/{user} | Lists all permissions for one user
-[**listPermissions**](git/workplace-search-kotlin/docs/PermissionsAPIApi.md#listPermissions) | **GET** /api/ws/v1/sources/{content_source_id}/permissions | Lists all permissions for all users
-[**putUserPermissions**](git/workplace-search-kotlin/docs/PermissionsAPIApi.md#putUserPermissions) | **PUT** /api/ws/v1/sources/{content_source_id}/permissions/{user} | Creates a new set of permissions or over-writes all existing permissions
-[**removeUserPermissions**](git/workplace-search-kotlin/docs/PermissionsAPIApi.md#removeUserPermissions) | **POST** /api/ws/v1/sources/{content_source_id}/permissions/{user}/remove | Removes one or more permissions from an existing set of permissions
+[**addUserPermissions**](PermissionsAPIApi.md#addUserPermissions) | **POST** /api/ws/v1/sources/{content_source_id}/permissions/{user}/add | Adds one or more new permissions atop existing permissions
+[**getUserPermissions**](PermissionsAPIApi.md#getUserPermissions) | **GET** /api/ws/v1/sources/{content_source_id}/permissions/{user} | Lists all permissions for one user
+[**listPermissions**](PermissionsAPIApi.md#listPermissions) | **GET** /api/ws/v1/sources/{content_source_id}/permissions | Lists all permissions for all users
+[**putUserPermissions**](PermissionsAPIApi.md#putUserPermissions) | **PUT** /api/ws/v1/sources/{content_source_id}/permissions/{user} | Creates a new set of permissions or over-writes all existing permissions
+[**removeUserPermissions**](PermissionsAPIApi.md#removeUserPermissions) | **POST** /api/ws/v1/sources/{content_source_id}/permissions/{user}/remove | Removes one or more permissions from an existing set of permissions
 
 <a name="addUserPermissions"></a>
 # **addUserPermissions**
@@ -21,8 +21,8 @@ Add one or more permission for a given user. Permissions are added atop the exis
 ### Example
 ```kotlin
 // Import classes:
-//import io.swagger.client.infrastructure.*
-//import org.elasticsearch.workplace-search.model.*;
+//import org.elasticsearch.workplacesearch.infrastructure.*
+//import org.elasticsearch.workplacesearch.models.*;
 
 val apiInstance = PermissionsAPIApi()
 val body : kotlin.Array<Permission> =  // kotlin.Array<Permission> | 
@@ -44,7 +44,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**kotlin.Array&lt;Permission&gt;**](git/workplace-search-kotlin/docs/Permission.md)|  |
+ **body** | [**kotlin.Array&lt;Permission&gt;**](Permission.md)|  |
  **contentSourceId** | **kotlin.String**| Unique ID for a Custom API source, provided upon creation of a Custom API Source |
  **user** | **kotlin.String**| The username in context |
 
@@ -72,8 +72,8 @@ List permissions for a user
 ### Example
 ```kotlin
 // Import classes:
-//import io.swagger.client.infrastructure.*
-//import org.elasticsearch.workplace-search.model.*;
+//import org.elasticsearch.workplacesearch.infrastructure.*
+//import org.elasticsearch.workplacesearch.models.*;
 
 val apiInstance = PermissionsAPIApi()
 val contentSourceId : kotlin.String = contentSourceId_example // kotlin.String | Unique ID for a Custom API source, provided upon creation of a Custom API Source
@@ -121,8 +121,8 @@ List all permissions for all users
 ### Example
 ```kotlin
 // Import classes:
-//import io.swagger.client.infrastructure.*
-//import org.elasticsearch.workplace-search.model.*;
+//import org.elasticsearch.workplacesearch.infrastructure.*
+//import org.elasticsearch.workplacesearch.models.*;
 
 val apiInstance = PermissionsAPIApi()
 val contentSourceId : kotlin.String = contentSourceId_example // kotlin.String | Unique ID for a Custom API source, provided upon creation of a Custom API Source
@@ -172,8 +172,8 @@ Create a set of permissions or overwrite existing permissions
 ### Example
 ```kotlin
 // Import classes:
-//import io.swagger.client.infrastructure.*
-//import org.elasticsearch.workplace-search.model.*;
+//import org.elasticsearch.workplacesearch.infrastructure.*
+//import org.elasticsearch.workplacesearch.models.*;
 
 val apiInstance = PermissionsAPIApi()
 val body : kotlin.Array<Permission> =  // kotlin.Array<Permission> | 
@@ -195,7 +195,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**kotlin.Array&lt;Permission&gt;**](git/workplace-search-kotlin/docs/Permission.md)|  |
+ **body** | [**kotlin.Array&lt;Permission&gt;**](Permission.md)|  |
  **contentSourceId** | **kotlin.String**| Unique ID for a Custom API source, provided upon creation of a Custom API Source |
  **user** | **kotlin.String**| The username in context |
 
@@ -223,8 +223,8 @@ Remove one or more permission for a given user
 ### Example
 ```kotlin
 // Import classes:
-//import io.swagger.client.infrastructure.*
-//import org.elasticsearch.workplace-search.model.*;
+//import org.elasticsearch.workplacesearch.infrastructure.*
+//import org.elasticsearch.workplacesearch.models.*;
 
 val apiInstance = PermissionsAPIApi()
 val body : kotlin.Array<Permission> =  // kotlin.Array<Permission> | 
@@ -246,7 +246,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**kotlin.Array&lt;Permission&gt;**](git/workplace-search-kotlin/docs/Permission.md)|  |
+ **body** | [**kotlin.Array&lt;Permission&gt;**](Permission.md)|  |
  **contentSourceId** | **kotlin.String**| Unique ID for a Custom API source, provided upon creation of a Custom API Source |
  **user** | **kotlin.String**| The username in context |
 

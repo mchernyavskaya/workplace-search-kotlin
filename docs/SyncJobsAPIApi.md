@@ -4,7 +4,7 @@ All URIs are relative to *{schemes}://{host}:{port}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**commandSyncJobs**](git/workplace-search-kotlin/docs/SyncJobsAPIApi.md#commandSyncJobs) | **POST** /api/ws/v1/sources/{content_source_id}/sync/jobs | Issue commands to a Content Source&#x27;s sync jobs
+[**commandSyncJobs**](SyncJobsAPIApi.md#commandSyncJobs) | **POST** /api/ws/v1/sources/{content_source_id}/sync/jobs | Issue commands to a Content Source&#x27;s sync jobs
 
 <a name="commandSyncJobs"></a>
 # **commandSyncJobs**
@@ -17,8 +17,8 @@ Control a content source&#x27;s sync jobs
 ### Example
 ```kotlin
 // Import classes:
-//import io.swagger.client.infrastructure.*
-//import org.elasticsearch.workplace-search.model.*;
+//import org.elasticsearch.workplacesearch.infrastructure.*
+//import org.elasticsearch.workplacesearch.models.*;
 
 val apiInstance = SyncJobsAPIApi()
 val body : SyncJobsCommand =  // SyncJobsCommand | 

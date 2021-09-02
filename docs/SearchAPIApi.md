@@ -4,7 +4,7 @@ All URIs are relative to *{schemes}://{host}:{port}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**search**](git/workplace-search-kotlin/docs/SearchAPIApi.md#search) | **POST** /api/ws/v1/search | Search across available sources with various query tuning options
+[**search**](SearchAPIApi.md#search) | **POST** /api/ws/v1/search | Search across available sources with various query tuning options
 
 <a name="search"></a>
 # **search**
@@ -17,8 +17,8 @@ Issue a Search Query
 ### Example
 ```kotlin
 // Import classes:
-//import io.swagger.client.infrastructure.*
-//import org.elasticsearch.workplace-search.model.*;
+//import org.elasticsearch.workplacesearch.infrastructure.*
+//import org.elasticsearch.workplacesearch.models.*;
 
 val apiInstance = SearchAPIApi()
 val body : SearchApiQuery =  // SearchApiQuery | 

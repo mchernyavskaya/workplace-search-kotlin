@@ -4,11 +4,11 @@ All URIs are relative to *{schemes}://{host}:{port}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createBatchSynonymSets**](git/workplace-search-kotlin/docs/SynonymsAPIApi.md#createBatchSynonymSets) | **POST** /api/ws/v1/synonyms | Create a batch of synonym sets
-[**deleteSynonymSet**](git/workplace-search-kotlin/docs/SynonymsAPIApi.md#deleteSynonymSet) | **DELETE** /api/ws/v1/synonyms/{synonym_set_id} | Delete a synonym set
-[**getSynonymSet**](git/workplace-search-kotlin/docs/SynonymsAPIApi.md#getSynonymSet) | **GET** /api/ws/v1/synonyms/{synonym_set_id} | Retrieve a synonym set by ID
-[**listSynonymSets**](git/workplace-search-kotlin/docs/SynonymsAPIApi.md#listSynonymSets) | **GET** /api/ws/v1/synonyms | Retrieves all synonym sets
-[**putSynonymSet**](git/workplace-search-kotlin/docs/SynonymsAPIApi.md#putSynonymSet) | **PUT** /api/ws/v1/synonyms/{synonym_set_id} | Update a synonym set
+[**createBatchSynonymSets**](SynonymsAPIApi.md#createBatchSynonymSets) | **POST** /api/ws/v1/synonyms | Create a batch of synonym sets
+[**deleteSynonymSet**](SynonymsAPIApi.md#deleteSynonymSet) | **DELETE** /api/ws/v1/synonyms/{synonym_set_id} | Delete a synonym set
+[**getSynonymSet**](SynonymsAPIApi.md#getSynonymSet) | **GET** /api/ws/v1/synonyms/{synonym_set_id} | Retrieve a synonym set by ID
+[**listSynonymSets**](SynonymsAPIApi.md#listSynonymSets) | **GET** /api/ws/v1/synonyms | Retrieves all synonym sets
+[**putSynonymSet**](SynonymsAPIApi.md#putSynonymSet) | **PUT** /api/ws/v1/synonyms/{synonym_set_id} | Update a synonym set
 
 <a name="createBatchSynonymSets"></a>
 # **createBatchSynonymSets**
@@ -21,8 +21,8 @@ Create batched synonym sets
 ### Example
 ```kotlin
 // Import classes:
-//import io.swagger.client.infrastructure.*
-//import org.elasticsearch.workplace-search.model.*;
+//import org.elasticsearch.workplacesearch.infrastructure.*
+//import org.elasticsearch.workplacesearch.models.*;
 
 val apiInstance = SynonymsAPIApi()
 val body : SynonymsCreateDefinition =  // SynonymsCreateDefinition | 
@@ -68,8 +68,8 @@ Delete a synonym set
 ### Example
 ```kotlin
 // Import classes:
-//import io.swagger.client.infrastructure.*
-//import org.elasticsearch.workplace-search.model.*;
+//import org.elasticsearch.workplacesearch.infrastructure.*
+//import org.elasticsearch.workplacesearch.models.*;
 
 val apiInstance = SynonymsAPIApi()
 val externalId : kotlin.String = externalId_example // kotlin.String | Unique ID for a content source document. Provided upon or returned at creation.
@@ -115,8 +115,8 @@ Retrieve a synonym set by ID
 ### Example
 ```kotlin
 // Import classes:
-//import io.swagger.client.infrastructure.*
-//import org.elasticsearch.workplace-search.model.*;
+//import org.elasticsearch.workplacesearch.infrastructure.*
+//import org.elasticsearch.workplacesearch.models.*;
 
 val apiInstance = SynonymsAPIApi()
 val externalId : kotlin.String = externalId_example // kotlin.String | Unique ID for a content source document. Provided upon or returned at creation.
@@ -162,8 +162,8 @@ Retrieve a list of synonym sets
 ### Example
 ```kotlin
 // Import classes:
-//import io.swagger.client.infrastructure.*
-//import org.elasticsearch.workplace-search.model.*;
+//import org.elasticsearch.workplacesearch.infrastructure.*
+//import org.elasticsearch.workplacesearch.models.*;
 
 val apiInstance = SynonymsAPIApi()
 val body : SynonymsListDefinition =  // SynonymsListDefinition | 
@@ -209,8 +209,8 @@ Update a synonym set
 ### Example
 ```kotlin
 // Import classes:
-//import io.swagger.client.infrastructure.*
-//import org.elasticsearch.workplace-search.model.*;
+//import org.elasticsearch.workplacesearch.infrastructure.*
+//import org.elasticsearch.workplacesearch.models.*;
 
 val apiInstance = SynonymsAPIApi()
 val body : SynonymsUpdateDefinition =  // SynonymsUpdateDefinition | 

@@ -4,11 +4,11 @@ All URIs are relative to *{schemes}://{host}:{port}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createExternalIdentity**](git/workplace-search-kotlin/docs/ExternalIdentitiesAPIApi.md#createExternalIdentity) | **POST** /api/ws/v1/sources/{content_source_id}/external_identities | Adds a new external identity
-[**deleteExternalIdentity**](git/workplace-search-kotlin/docs/ExternalIdentitiesAPIApi.md#deleteExternalIdentity) | **DELETE** /api/ws/v1/sources/{content_source_id}/external_identities/{user} | Deletes an external identity
-[**getExternalIdentity**](git/workplace-search-kotlin/docs/ExternalIdentitiesAPIApi.md#getExternalIdentity) | **GET** /api/ws/v1/sources/{content_source_id}/external_identities/{user} | Retrieves an external identity
-[**listExternalIdentities**](git/workplace-search-kotlin/docs/ExternalIdentitiesAPIApi.md#listExternalIdentities) | **GET** /api/ws/v1/sources/{content_source_id}/external_identities | Retrieves all external identities
-[**putExternalIdentity**](git/workplace-search-kotlin/docs/ExternalIdentitiesAPIApi.md#putExternalIdentity) | **PUT** /api/ws/v1/sources/{content_source_id}/external_identities/{user} | Updates an external identity
+[**createExternalIdentity**](ExternalIdentitiesAPIApi.md#createExternalIdentity) | **POST** /api/ws/v1/sources/{content_source_id}/external_identities | Adds a new external identity
+[**deleteExternalIdentity**](ExternalIdentitiesAPIApi.md#deleteExternalIdentity) | **DELETE** /api/ws/v1/sources/{content_source_id}/external_identities/{user} | Deletes an external identity
+[**getExternalIdentity**](ExternalIdentitiesAPIApi.md#getExternalIdentity) | **GET** /api/ws/v1/sources/{content_source_id}/external_identities/{user} | Retrieves an external identity
+[**listExternalIdentities**](ExternalIdentitiesAPIApi.md#listExternalIdentities) | **GET** /api/ws/v1/sources/{content_source_id}/external_identities | Retrieves all external identities
+[**putExternalIdentity**](ExternalIdentitiesAPIApi.md#putExternalIdentity) | **PUT** /api/ws/v1/sources/{content_source_id}/external_identities/{user} | Updates an external identity
 
 <a name="createExternalIdentity"></a>
 # **createExternalIdentity**
@@ -21,8 +21,8 @@ Adds a new external identity
 ### Example
 ```kotlin
 // Import classes:
-//import io.swagger.client.infrastructure.*
-//import org.elasticsearch.workplace-search.model.*;
+//import org.elasticsearch.workplacesearch.infrastructure.*
+//import org.elasticsearch.workplacesearch.models.*;
 
 val apiInstance = ExternalIdentitiesAPIApi()
 val body : ExternalIdentity =  // ExternalIdentity | 
@@ -70,8 +70,8 @@ Deletes an external identity
 ### Example
 ```kotlin
 // Import classes:
-//import io.swagger.client.infrastructure.*
-//import org.elasticsearch.workplace-search.model.*;
+//import org.elasticsearch.workplacesearch.infrastructure.*
+//import org.elasticsearch.workplacesearch.models.*;
 
 val apiInstance = ExternalIdentitiesAPIApi()
 val contentSourceId : kotlin.String = contentSourceId_example // kotlin.String | Unique ID for a Custom API source, provided upon creation of a Custom API Source
@@ -119,8 +119,8 @@ Retrieves an external identity
 ### Example
 ```kotlin
 // Import classes:
-//import io.swagger.client.infrastructure.*
-//import org.elasticsearch.workplace-search.model.*;
+//import org.elasticsearch.workplacesearch.infrastructure.*
+//import org.elasticsearch.workplacesearch.models.*;
 
 val apiInstance = ExternalIdentitiesAPIApi()
 val contentSourceId : kotlin.String = contentSourceId_example // kotlin.String | Unique ID for a Custom API source, provided upon creation of a Custom API Source
@@ -168,8 +168,8 @@ Retrieves all external identities
 ### Example
 ```kotlin
 // Import classes:
-//import io.swagger.client.infrastructure.*
-//import org.elasticsearch.workplace-search.model.*;
+//import org.elasticsearch.workplacesearch.infrastructure.*
+//import org.elasticsearch.workplacesearch.models.*;
 
 val apiInstance = ExternalIdentitiesAPIApi()
 val contentSourceId : kotlin.String = contentSourceId_example // kotlin.String | Unique ID for a Custom API source, provided upon creation of a Custom API Source
@@ -219,8 +219,8 @@ Updates an external identity
 ### Example
 ```kotlin
 // Import classes:
-//import io.swagger.client.infrastructure.*
-//import org.elasticsearch.workplace-search.model.*;
+//import org.elasticsearch.workplacesearch.infrastructure.*
+//import org.elasticsearch.workplacesearch.models.*;
 
 val apiInstance = ExternalIdentitiesAPIApi()
 val body : ExternalIdentity =  // ExternalIdentity | 
