@@ -15,5 +15,4 @@ class LocalDateTimeAdapter {
     fun fromJson(value: String): LocalDateTime {
         return LocalDateTime.parse(value, DateTimeFormatter.ISO_LOCAL_DATE_TIME)
     }
-
 }
