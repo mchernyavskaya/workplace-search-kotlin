@@ -22,8 +22,8 @@ Create batched synonym sets
 ### Example
 ```kotlin
 // Import classes:
-//import org.elasticsearch.workplacesearch.infrastructure.*
-//import org.elasticsearch.workplacesearch.models.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
 
 val apiInstance = SynonymsAPIApi()
 val synonymsCreateDefinition : SynonymsCreateDefinition =  // SynonymsCreateDefinition | 
@@ -72,8 +72,8 @@ Delete a synonym set
 ### Example
 ```kotlin
 // Import classes:
-//import org.elasticsearch.workplacesearch.infrastructure.*
-//import org.elasticsearch.workplacesearch.models.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
 
 val apiInstance = SynonymsAPIApi()
 val synonymSetId : kotlin.String = synonymSetId_example // kotlin.String | Unique ID for a synonym set. Provided upon or returned at creation.
@@ -122,8 +122,8 @@ Retrieve a synonym set by ID
 ### Example
 ```kotlin
 // Import classes:
-//import org.elasticsearch.workplacesearch.infrastructure.*
-//import org.elasticsearch.workplacesearch.models.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
 
 val apiInstance = SynonymsAPIApi()
 val synonymSetId : kotlin.String = synonymSetId_example // kotlin.String | Unique ID for a synonym set. Provided upon or returned at creation.
@@ -172,8 +172,8 @@ Retrieve a list of synonym sets
 ### Example
 ```kotlin
 // Import classes:
-//import org.elasticsearch.workplacesearch.infrastructure.*
-//import org.elasticsearch.workplacesearch.models.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
 
 val apiInstance = SynonymsAPIApi()
 val synonymsListDefinition : SynonymsListDefinition =  // SynonymsListDefinition | 
@@ -222,8 +222,8 @@ Update a synonym set
 ### Example
 ```kotlin
 // Import classes:
-//import org.elasticsearch.workplacesearch.infrastructure.*
-//import org.elasticsearch.workplacesearch.models.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
 
 val apiInstance = SynonymsAPIApi()
 val synonymSetId : kotlin.String = synonymSetId_example // kotlin.String | Unique ID for a synonym set. Provided upon or returned at creation.

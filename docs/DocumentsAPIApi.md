@@ -21,8 +21,8 @@ Remove documents from a Custom API Source
 ### Example
 ```kotlin
 // Import classes:
-//import org.elasticsearch.workplacesearch.infrastructure.*
-//import org.elasticsearch.workplacesearch.models.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
 
 val apiInstance = DocumentsAPIApi()
 val contentSourceId : kotlin.String = contentSourceId_example // kotlin.String | Unique ID for a Custom API source, provided upon creation of a Custom API Source
@@ -73,8 +73,8 @@ Deletes documents by query in a custom content source
 ### Example
 ```kotlin
 // Import classes:
-//import org.elasticsearch.workplacesearch.infrastructure.*
-//import org.elasticsearch.workplacesearch.models.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
 
 val apiInstance = DocumentsAPIApi()
 val contentSourceId : kotlin.String = contentSourceId_example // kotlin.String | Unique ID for a Custom API source, provided upon creation of a Custom API Source
@@ -125,8 +125,8 @@ Retrieves a document by ID from the specified content source
 ### Example
 ```kotlin
 // Import classes:
-//import org.elasticsearch.workplacesearch.infrastructure.*
-//import org.elasticsearch.workplacesearch.models.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
 
 val apiInstance = DocumentsAPIApi()
 val contentSourceId : kotlin.String = contentSourceId_example // kotlin.String | Unique ID for a Custom API source, provided upon creation of a Custom API Source
@@ -177,8 +177,8 @@ Indexes one or more new documents into a custom content source, or updates one o
 ### Example
 ```kotlin
 // Import classes:
-//import org.elasticsearch.workplacesearch.infrastructure.*
-//import org.elasticsearch.workplacesearch.models.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
 
 val apiInstance = DocumentsAPIApi()
 val contentSourceId : kotlin.String = contentSourceId_example // kotlin.String | Unique ID for a Custom API source, provided upon creation of a Custom API Source

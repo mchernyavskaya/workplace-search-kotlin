@@ -24,8 +24,8 @@ Create a custom content source
 ### Example
 ```kotlin
 // Import classes:
-//import org.elasticsearch.workplacesearch.infrastructure.*
-//import org.elasticsearch.workplacesearch.models.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
 
 val apiInstance = ContentSourcesAPIApi()
 val contentSourceCreateDefinition : ContentSourceCreateDefinition =  // ContentSourceCreateDefinition | 
@@ -74,8 +74,8 @@ Deletes a content source by ID
 ### Example
 ```kotlin
 // Import classes:
-//import org.elasticsearch.workplacesearch.infrastructure.*
-//import org.elasticsearch.workplacesearch.models.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
 
 val apiInstance = ContentSourcesAPIApi()
 val contentSourceId : kotlin.String = contentSourceId_example // kotlin.String | Unique ID for a Custom API source, provided upon creation of a Custom API Source
@@ -124,8 +124,8 @@ Retrieves a content source&#39;s automatic query refinement details
 ### Example
 ```kotlin
 // Import classes:
-//import org.elasticsearch.workplacesearch.infrastructure.*
-//import org.elasticsearch.workplacesearch.models.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
 
 val apiInstance = ContentSourcesAPIApi()
 val contentSourceId : kotlin.String = contentSourceId_example // kotlin.String | Unique ID for a Custom API source, provided upon creation of a Custom API Source
@@ -174,8 +174,8 @@ Retrieves a content source by ID
 ### Example
 ```kotlin
 // Import classes:
-//import org.elasticsearch.workplacesearch.infrastructure.*
-//import org.elasticsearch.workplacesearch.models.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
 
 val apiInstance = ContentSourcesAPIApi()
 val contentSourceId : kotlin.String = contentSourceId_example // kotlin.String | Unique ID for a Custom API source, provided upon creation of a Custom API Source
@@ -224,8 +224,8 @@ Retrieves all content sources
 ### Example
 ```kotlin
 // Import classes:
-//import org.elasticsearch.workplacesearch.infrastructure.*
-//import org.elasticsearch.workplacesearch.models.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
 
 val apiInstance = ContentSourcesAPIApi()
 val currentPage : kotlin.Int = 56 // kotlin.Int | Which page of results to request
@@ -276,8 +276,8 @@ Update a content source
 ### Example
 ```kotlin
 // Import classes:
-//import org.elasticsearch.workplacesearch.infrastructure.*
-//import org.elasticsearch.workplacesearch.models.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
 
 val apiInstance = ContentSourcesAPIApi()
 val contentSourceId : kotlin.String = contentSourceId_example // kotlin.String | Unique ID for a Custom API source, provided upon creation of a Custom API Source
@@ -328,8 +328,8 @@ Upload content source icons
 ### Example
 ```kotlin
 // Import classes:
-//import org.elasticsearch.workplacesearch.infrastructure.*
-//import org.elasticsearch.workplacesearch.models.*
+//import org.openapitools.client.infrastructure.*
+//import org.openapitools.client.models.*
 
 val apiInstance = ContentSourcesAPIApi()
 val contentSourceId : kotlin.String = contentSourceId_example // kotlin.String | Unique ID for a Custom API source, provided upon creation of a Custom API Source
