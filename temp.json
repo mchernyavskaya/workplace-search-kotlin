@@ -64,8 +64,7 @@
             "enum": [
               "capitalize",
               "titleize",
-              "mime_type",
-              null
+              "mime_type"
             ],
             "nullable": true
           }
