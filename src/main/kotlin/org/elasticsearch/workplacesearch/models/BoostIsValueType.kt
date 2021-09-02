@@ -41,7 +41,7 @@ data class BoostIsValueType (
      *
      * Values: `value`
      */
-    enum class Type(val value: kotlin.String) {
+    enum class Type(val v: kotlin.String) {
         @Json(name = "value") `value`("value");
     }
 }
