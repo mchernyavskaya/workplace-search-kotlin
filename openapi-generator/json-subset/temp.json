@@ -1,0 +1,244 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Workplace Search API",
+    "version": "v1",
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "servers": [
+    {
+      "url": "{schemes}://{host}:{port}",
+      "variables": {
+        "schemes": {
+          "enum": [
+            "http",
+            "https"
+          ],
+          "default": "http"
+        },
+        "host": {
+          "default": "localhost",
+          "description": "The hostname running the server"
+        },
+        "port": {
+          "default": "3002"
+        }
+      }
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearer_auth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "Authorization"
+      },
+      "basic_auth": {
+        "type": "http",
+        "scheme": "basic"
+      }
+    },
+    "schemas": {
+      "query_refinement_item": {
+        "type": "object",
+        "description": "Specifics regarding how this part of the query was refined",
+        "properties": {
+          "term": {
+            "type": "string",
+            "description": "The term(s) used for the trigger"
+          },
+          "position": {
+            "type": "array",
+            "maxItems": 2,
+            "minItems": 2,
+            "items": {
+              "type": "number"
+            },
+            "description": "The start and end position the term(s) exist in the original query"
+          },
+          "trigger_type": {
+            "type": "string",
+            "description": "The type of trigger created"
+          },
+          "trigger_filter_type": {
+            "type": "string",
+            "description": "The type of filter created from this trigger"
+          },
+          "filter": {
+            "$ref": "#/components/schemas/filter"
+          }
+        }
+      },
+      "filter": {
+        "type": "object",
+        "minProperties": 0,
+        "maxProperties": 1,
+        "not": {
+          "minProperties": 1,
+          "additionalProperties": false,
+          "properties": {
+            "any": {
+            },
+            "all": {
+            },
+            "none": {
+            }
+          }
+        },
+        "additionalProperties": {
+          "oneOf": [
+            {
+              "$ref": "#/components/schemas/array_or_singular_filter_value"
+            },
+            {
+              "$ref": "#/components/schemas/range_filter"
+            },
+            {
+              "$ref": "#/components/schemas/geo_range_filter"
+            },
+            {
+              "$ref": "#/components/schemas/geo_distance_filter"
+            }
+          ]
+        }
+      },
+      "array_or_singular_filter_value": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/filter_value"
+          },
+          {
+            "type": "array",
+            "maxItems": 1024,
+            "items": {
+              "$ref": "#/components/schemas/filter_value"
+            }
+          }
+        ]
+      },
+      "filter_value": {
+        "description": "A value to filter on",
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          }
+        ]
+      },
+      "range_filter": {
+        "type": "object",
+        "minProperties": 1,
+        "additionalProperties": false,
+        "properties": {
+          "from": {
+            "description": "The start of the range, inclusive",
+            "$ref": "#/components/schemas/filter_value"
+          },
+          "to": {
+            "description": "The end of the range, exclusive",
+            "$ref": "#/components/schemas/filter_value"
+          }
+        }
+      },
+      "geo_range_filter": {
+        "type": "object",
+        "description": "A range filter with a geographic center",
+        "minProperties": 3,
+        "additionalProperties": false,
+        "required": [
+          "unit",
+          "center"
+        ],
+        "properties": {
+          "unit": {
+            "description": "The base unit of measurement [mm, cm, m (meters), km, in, ft, yd, or mi (miles)]",
+            "$ref": "#/components/schemas/geo_unit_enum"
+          },
+          "center": {
+            "description": "The mode of the distribution as a \"lat, lon\" string, \"POINT(lon lat)\" WKT POINT string, Geohash string, or [lon, lat] array",
+            "$ref": "#/components/schemas/geo_point"
+          },
+          "from": {
+            "description": "Inclusive lower bound of the range. Is required if to is not provided",
+            "$ref": "#/components/schemas/filter_value"
+          },
+          "to": {
+            "description": "Exclusive upper bound of the range. Is required if from is not provided",
+            "$ref": "#/components/schemas/filter_value"
+          }
+        }
+      },
+      "geo_distance_filter": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "unit",
+          "center",
+          "distance"
+        ],
+        "properties": {
+          "unit": {
+            "description": "The base unit of measurement [mm, cm, m (meters), km, in, ft, yd, or mi (miles)]",
+            "$ref": "#/components/schemas/geo_unit_enum"
+          },
+          "center": {
+            "description": "The mode of the distribution as a \"lat, lon\" string, \"POINT(lon lat)\" WKT POINT string, Geohash string, or [lon, lat] array",
+            "$ref": "#/components/schemas/geo_point"
+          },
+          "distance": {
+            "description": "A number representing the distance unit",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1.7976931348623157e+308
+          }
+        }
+      },
+      "geo_point": {
+        "anyOf": [
+          {
+            "type": "string",
+            "pattern": "(\\A\\s*(?<lat>[-+]?\\d*\\.?\\d+)\\s*,\\s*(?<lon>[-+]?\\d*\\.?\\d+)\\s*\\z)"
+          },
+          {
+            "type": "string",
+            "pattern": "(?i-mx:\\A\\s*POINT\\s*\\(\\s*(?<lon>[-+]?\\d*\\.?\\d+)\\s+(?<lat>[-+]?\\d*\\.?\\d+)\\s*\\)\\s*\\z)"
+          },
+          {
+            "type": "string",
+            "pattern": "(\\A[0-9b-hjkmnp-z]+\\z)"
+          },
+          {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "additionalProperties": false,
+            "items": {
+              "type": "number",
+              "minimum": -180,
+              "maximum": 180
+            }
+          }
+        ]
+      },
+      "geo_unit_enum": {
+        "enum": [
+          "m",
+          "mi",
+          "in",
+          "ft",
+          "yd",
+          "km",
+          "cm",
+          "mm"
+        ]
+      }
+    }
+  },
+  "paths": {
+  }
+}
