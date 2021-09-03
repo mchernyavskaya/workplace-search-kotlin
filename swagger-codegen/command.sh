@@ -1,1 +1,0 @@
-swagger-codegen generate -i workplace-search.json -l kotlin-client -o ~/git/workplace-search-kotlin -c config.json --invoker-package org.elasticsearch.workplacesearch --model-package org.elasticsearch.workplacesearch.models --api-package org.elasticsearch.workplacesearch.api
