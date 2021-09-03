@@ -1,0 +1,6 @@
+{
+  "groupId": "org.elasticsearch.workplacesearch",
+  "artifactId": "kotlin-client",
+  "artifactVersion": "0.0.1",
+  "packageName": "org.elasticsearch.workplacesearch"
+}
