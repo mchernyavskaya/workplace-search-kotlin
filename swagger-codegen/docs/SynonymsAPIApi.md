@@ -4,11 +4,11 @@ All URIs are relative to *{schemes}://{host}:{port}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createBatchSynonymSets**](SynonymsAPIApi.md#createBatchSynonymSets) | **POST** /api/ws/v1/synonyms | Create a batch of synonym sets
-[**deleteSynonymSet**](SynonymsAPIApi.md#deleteSynonymSet) | **DELETE** /api/ws/v1/synonyms/{synonym_set_id} | Delete a synonym set
-[**getSynonymSet**](SynonymsAPIApi.md#getSynonymSet) | **GET** /api/ws/v1/synonyms/{synonym_set_id} | Retrieve a synonym set by ID
-[**listSynonymSets**](SynonymsAPIApi.md#listSynonymSets) | **GET** /api/ws/v1/synonyms | Retrieves all synonym sets
-[**putSynonymSet**](SynonymsAPIApi.md#putSynonymSet) | **PUT** /api/ws/v1/synonyms/{synonym_set_id} | Update a synonym set
+[**createBatchSynonymSets**](git/workplace-search-kotlin/swagger-codegen/docs/SynonymsAPIApi.md#createBatchSynonymSets) | **POST** /api/ws/v1/synonyms | Create a batch of synonym sets
+[**deleteSynonymSet**](git/workplace-search-kotlin/swagger-codegen/docs/SynonymsAPIApi.md#deleteSynonymSet) | **DELETE** /api/ws/v1/synonyms/{synonym_set_id} | Delete a synonym set
+[**getSynonymSet**](git/workplace-search-kotlin/swagger-codegen/docs/SynonymsAPIApi.md#getSynonymSet) | **GET** /api/ws/v1/synonyms/{synonym_set_id} | Retrieve a synonym set by ID
+[**listSynonymSets**](git/workplace-search-kotlin/swagger-codegen/docs/SynonymsAPIApi.md#listSynonymSets) | **GET** /api/ws/v1/synonyms | Retrieves all synonym sets
+[**putSynonymSet**](git/workplace-search-kotlin/swagger-codegen/docs/SynonymsAPIApi.md#putSynonymSet) | **PUT** /api/ws/v1/synonyms/{synonym_set_id} | Update a synonym set
 
 <a name="createBatchSynonymSets"></a>
 # **createBatchSynonymSets**
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 
@@ -97,7 +97,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 
@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 
@@ -240,7 +240,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 

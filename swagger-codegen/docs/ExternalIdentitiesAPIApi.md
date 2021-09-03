@@ -4,11 +4,11 @@ All URIs are relative to *{schemes}://{host}:{port}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createExternalIdentity**](ExternalIdentitiesAPIApi.md#createExternalIdentity) | **POST** /api/ws/v1/sources/{content_source_id}/external_identities | Adds a new external identity
-[**deleteExternalIdentity**](ExternalIdentitiesAPIApi.md#deleteExternalIdentity) | **DELETE** /api/ws/v1/sources/{content_source_id}/external_identities/{user} | Deletes an external identity
-[**getExternalIdentity**](ExternalIdentitiesAPIApi.md#getExternalIdentity) | **GET** /api/ws/v1/sources/{content_source_id}/external_identities/{user} | Retrieves an external identity
-[**listExternalIdentities**](ExternalIdentitiesAPIApi.md#listExternalIdentities) | **GET** /api/ws/v1/sources/{content_source_id}/external_identities | Retrieves all external identities
-[**putExternalIdentity**](ExternalIdentitiesAPIApi.md#putExternalIdentity) | **PUT** /api/ws/v1/sources/{content_source_id}/external_identities/{user} | Updates an external identity
+[**createExternalIdentity**](git/workplace-search-kotlin/swagger-codegen/docs/ExternalIdentitiesAPIApi.md#createExternalIdentity) | **POST** /api/ws/v1/sources/{content_source_id}/external_identities | Adds a new external identity
+[**deleteExternalIdentity**](git/workplace-search-kotlin/swagger-codegen/docs/ExternalIdentitiesAPIApi.md#deleteExternalIdentity) | **DELETE** /api/ws/v1/sources/{content_source_id}/external_identities/{user} | Deletes an external identity
+[**getExternalIdentity**](git/workplace-search-kotlin/swagger-codegen/docs/ExternalIdentitiesAPIApi.md#getExternalIdentity) | **GET** /api/ws/v1/sources/{content_source_id}/external_identities/{user} | Retrieves an external identity
+[**listExternalIdentities**](git/workplace-search-kotlin/swagger-codegen/docs/ExternalIdentitiesAPIApi.md#listExternalIdentities) | **GET** /api/ws/v1/sources/{content_source_id}/external_identities | Retrieves all external identities
+[**putExternalIdentity**](git/workplace-search-kotlin/swagger-codegen/docs/ExternalIdentitiesAPIApi.md#putExternalIdentity) | **PUT** /api/ws/v1/sources/{content_source_id}/external_identities/{user} | Updates an external identity
 
 <a name="createExternalIdentity"></a>
 # **createExternalIdentity**
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 
@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 
@@ -201,7 +201,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 
@@ -252,7 +252,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 

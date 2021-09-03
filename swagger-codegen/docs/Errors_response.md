@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**errors** | [**Errors**](Errors.md) |  | 
+**errors** | [**Errors**](git/workplace-search-kotlin/swagger-codegen/docs/Errors.md) |  | 

@@ -4,4 +4,4 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **user** | [**kotlin.String**](.md) |  | 
-**permissions** | [**Permissions**](Permissions.md) |  | 
+**permissions** | [**Permissions**](git/workplace-search-kotlin/swagger-codegen/docs/Permissions.md) |  | 

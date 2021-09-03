@@ -4,7 +4,7 @@ All URIs are relative to *{schemes}://{host}:{port}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**commandSyncJobs**](SyncJobsAPIApi.md#commandSyncJobs) | **POST** /api/ws/v1/sources/{content_source_id}/sync/jobs | Issue commands to a Content Source&#x27;s sync jobs
+[**commandSyncJobs**](git/workplace-search-kotlin/swagger-codegen/docs/SyncJobsAPIApi.md#commandSyncJobs) | **POST** /api/ws/v1/sources/{content_source_id}/sync/jobs | Issue commands to a Content Source&#x27;s sync jobs
 
 <a name="commandSyncJobs"></a>
 # **commandSyncJobs**
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 

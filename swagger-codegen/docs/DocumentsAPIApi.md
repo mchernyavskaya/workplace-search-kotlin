@@ -4,10 +4,10 @@ All URIs are relative to *{schemes}://{host}:{port}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteDocuments**](DocumentsAPIApi.md#deleteDocuments) | **POST** /api/ws/v1/sources/{content_source_id}/documents/bulk_destroy | Deletes a list of documents from a custom content source
-[**deleteDocumentsByQuery**](DocumentsAPIApi.md#deleteDocumentsByQuery) | **DELETE** /api/ws/v1/sources/{content_source_id}/documents | Deletes documents by query in a custom content source
-[**getDocument**](DocumentsAPIApi.md#getDocument) | **GET** /api/ws/v1/sources/{content_source_id}/documents/{document_id} | Retrieves a document by ID from the specified content source
-[**indexDocuments**](DocumentsAPIApi.md#indexDocuments) | **POST** /api/ws/v1/sources/{content_source_id}/documents/bulk_create | Indexes one or more new documents into a custom content source, or updates one or more existing documents
+[**deleteDocuments**](git/workplace-search-kotlin/swagger-codegen/docs/DocumentsAPIApi.md#deleteDocuments) | **POST** /api/ws/v1/sources/{content_source_id}/documents/bulk_destroy | Deletes a list of documents from a custom content source
+[**deleteDocumentsByQuery**](git/workplace-search-kotlin/swagger-codegen/docs/DocumentsAPIApi.md#deleteDocumentsByQuery) | **DELETE** /api/ws/v1/sources/{content_source_id}/documents | Deletes documents by query in a custom content source
+[**getDocument**](git/workplace-search-kotlin/swagger-codegen/docs/DocumentsAPIApi.md#getDocument) | **GET** /api/ws/v1/sources/{content_source_id}/documents/{document_id} | Retrieves a document by ID from the specified content source
+[**indexDocuments**](git/workplace-search-kotlin/swagger-codegen/docs/DocumentsAPIApi.md#indexDocuments) | **POST** /api/ws/v1/sources/{content_source_id}/documents/bulk_create | Indexes one or more new documents into a custom content source, or updates one or more existing documents
 
 <a name="deleteDocuments"></a>
 # **deleteDocuments**
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 
@@ -189,7 +189,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**kotlin.Array&lt;Document&gt;**](Document.md)|  |
+ **body** | [**kotlin.Array&lt;Document&gt;**](git/workplace-search-kotlin/swagger-codegen/docs/Document.md)|  |
  **contentSourceId** | **kotlin.String**| Unique ID for a Custom API source, provided upon creation of a Custom API Source |
 
 ### Return type
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 

@@ -4,7 +4,7 @@ All URIs are relative to *{schemes}://{host}:{port}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**search**](SearchAPIApi.md#search) | **POST** /api/ws/v1/search | Search across available sources with various query tuning options
+[**search**](git/workplace-search-kotlin/swagger-codegen/docs/SearchAPIApi.md#search) | **POST** /api/ws/v1/search | Search across available sources with various query tuning options
 
 <a name="search"></a>
 # **search**
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 

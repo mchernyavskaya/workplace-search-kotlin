@@ -7,4 +7,4 @@ Name | Type | Description | Notes
 **position** | [**kotlin.Array&lt;java.math.BigDecimal&gt;**](java.math.BigDecimal.md) | The start and end position the term(s) exist in the original query |  [optional]
 **triggerType** | [**kotlin.String**](.md) | The type of trigger created |  [optional]
 **triggerFilterType** | [**kotlin.String**](.md) | The type of filter created from this trigger |  [optional]
-**filter** | [**Filter**](Filter.md) |  |  [optional]
+**filter** | [**Filter**](git/workplace-search-kotlin/swagger-codegen/docs/Filter.md) |  |  [optional]

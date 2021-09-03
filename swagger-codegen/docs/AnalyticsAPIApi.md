@@ -4,7 +4,7 @@ All URIs are relative to *{schemes}://{host}:{port}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createAnalyticsEvent**](AnalyticsAPIApi.md#createAnalyticsEvent) | **POST** /api/ws/v1/analytics/event | Capture click and feedback analytic events
+[**createAnalyticsEvent**](git/workplace-search-kotlin/swagger-codegen/docs/AnalyticsAPIApi.md#createAnalyticsEvent) | **POST** /api/ws/v1/analytics/event | Capture click and feedback analytic events
 
 <a name="createAnalyticsEvent"></a>
 # **createAnalyticsEvent**
@@ -45,7 +45,7 @@ null (empty response body)
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 

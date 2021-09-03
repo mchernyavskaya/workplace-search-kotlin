@@ -4,4 +4,4 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created** | [**ContentSource**](ContentSource.md) |  | 
-**errors** | [**Errors**](Errors.md) |  | 
+**errors** | [**Errors**](git/workplace-search-kotlin/swagger-codegen/docs/Errors.md) |  | 

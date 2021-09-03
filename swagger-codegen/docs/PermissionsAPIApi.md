@@ -4,11 +4,11 @@ All URIs are relative to *{schemes}://{host}:{port}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addUserPermissions**](PermissionsAPIApi.md#addUserPermissions) | **POST** /api/ws/v1/sources/{content_source_id}/permissions/{user}/add | Adds one or more new permissions atop existing permissions
-[**getUserPermissions**](PermissionsAPIApi.md#getUserPermissions) | **GET** /api/ws/v1/sources/{content_source_id}/permissions/{user} | Lists all permissions for one user
-[**listPermissions**](PermissionsAPIApi.md#listPermissions) | **GET** /api/ws/v1/sources/{content_source_id}/permissions | Lists all permissions for all users
-[**putUserPermissions**](PermissionsAPIApi.md#putUserPermissions) | **PUT** /api/ws/v1/sources/{content_source_id}/permissions/{user} | Creates a new set of permissions or over-writes all existing permissions
-[**removeUserPermissions**](PermissionsAPIApi.md#removeUserPermissions) | **POST** /api/ws/v1/sources/{content_source_id}/permissions/{user}/remove | Removes one or more permissions from an existing set of permissions
+[**addUserPermissions**](git/workplace-search-kotlin/swagger-codegen/docs/PermissionsAPIApi.md#addUserPermissions) | **POST** /api/ws/v1/sources/{content_source_id}/permissions/{user}/add | Adds one or more new permissions atop existing permissions
+[**getUserPermissions**](git/workplace-search-kotlin/swagger-codegen/docs/PermissionsAPIApi.md#getUserPermissions) | **GET** /api/ws/v1/sources/{content_source_id}/permissions/{user} | Lists all permissions for one user
+[**listPermissions**](git/workplace-search-kotlin/swagger-codegen/docs/PermissionsAPIApi.md#listPermissions) | **GET** /api/ws/v1/sources/{content_source_id}/permissions | Lists all permissions for all users
+[**putUserPermissions**](git/workplace-search-kotlin/swagger-codegen/docs/PermissionsAPIApi.md#putUserPermissions) | **PUT** /api/ws/v1/sources/{content_source_id}/permissions/{user} | Creates a new set of permissions or over-writes all existing permissions
+[**removeUserPermissions**](git/workplace-search-kotlin/swagger-codegen/docs/PermissionsAPIApi.md#removeUserPermissions) | **POST** /api/ws/v1/sources/{content_source_id}/permissions/{user}/remove | Removes one or more permissions from an existing set of permissions
 
 <a name="addUserPermissions"></a>
 # **addUserPermissions**
@@ -44,7 +44,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**kotlin.Array&lt;Permission&gt;**](Permission.md)|  |
+ **body** | [**kotlin.Array&lt;Permission&gt;**](git/workplace-search-kotlin/swagger-codegen/docs/Permission.md)|  |
  **contentSourceId** | **kotlin.String**| Unique ID for a Custom API source, provided upon creation of a Custom API Source |
  **user** | **kotlin.String**| The username in context |
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 
@@ -195,7 +195,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**kotlin.Array&lt;Permission&gt;**](Permission.md)|  |
+ **body** | [**kotlin.Array&lt;Permission&gt;**](git/workplace-search-kotlin/swagger-codegen/docs/Permission.md)|  |
  **contentSourceId** | **kotlin.String**| Unique ID for a Custom API source, provided upon creation of a Custom API Source |
  **user** | **kotlin.String**| The username in context |
 
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 
@@ -246,7 +246,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**kotlin.Array&lt;Permission&gt;**](Permission.md)|  |
+ **body** | [**kotlin.Array&lt;Permission&gt;**](git/workplace-search-kotlin/swagger-codegen/docs/Permission.md)|  |
  **contentSourceId** | **kotlin.String**| Unique ID for a Custom API source, provided upon creation of a Custom API Source |
  **user** | **kotlin.String**| The username in context |
 
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 

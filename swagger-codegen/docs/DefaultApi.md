@@ -4,9 +4,9 @@ All URIs are relative to *{schemes}://{host}:{port}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCurrentUser**](DefaultApi.md#getCurrentUser) | **GET** /api/ws/v1/whoami | Get the authenticated user
-[**getTriggersBlocklist**](DefaultApi.md#getTriggersBlocklist) | **GET** /api/ws/v1/automatic_query_refinement | Get current triggers blocklist
-[**putTriggersBlocklist**](DefaultApi.md#putTriggersBlocklist) | **PUT** /api/ws/v1/automatic_query_refinement | Update current triggers blocklist
+[**getCurrentUser**](git/workplace-search-kotlin/swagger-codegen/docs/DefaultApi.md#getCurrentUser) | **GET** /api/ws/v1/whoami | Get the authenticated user
+[**getTriggersBlocklist**](git/workplace-search-kotlin/swagger-codegen/docs/DefaultApi.md#getTriggersBlocklist) | **GET** /api/ws/v1/automatic_query_refinement | Get current triggers blocklist
+[**putTriggersBlocklist**](git/workplace-search-kotlin/swagger-codegen/docs/DefaultApi.md#putTriggersBlocklist) | **PUT** /api/ws/v1/automatic_query_refinement | Update current triggers blocklist
 
 <a name="getCurrentUser"></a>
 # **getCurrentUser**
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 
@@ -91,7 +91,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 
@@ -134,7 +134,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 

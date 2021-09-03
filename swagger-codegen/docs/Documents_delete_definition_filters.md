@@ -3,4 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**lastUpdated** | [**Range**](Range.md) |  |  [optional]
+**lastUpdated** | [**Range**](git/workplace-search-kotlin/swagger-codegen/docs/Range.md) |  |  [optional]

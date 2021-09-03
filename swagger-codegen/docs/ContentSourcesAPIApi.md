@@ -4,13 +4,13 @@ All URIs are relative to *{schemes}://{host}:{port}*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createContentSource**](ContentSourcesAPIApi.md#createContentSource) | **POST** /api/ws/v1/sources | Create a content source
-[**deleteContentSource**](ContentSourcesAPIApi.md#deleteContentSource) | **DELETE** /api/ws/v1/sources/{content_source_id} | Deletes a content source by ID
-[**getAutoQueryRefinementDetails**](ContentSourcesAPIApi.md#getAutoQueryRefinementDetails) | **GET** /api/ws/v1/sources/{content_source_id}/automatic_query_refinement | Retrieves a content source&#x27;s automatic query refinement details
-[**getContentSource**](ContentSourcesAPIApi.md#getContentSource) | **GET** /api/ws/v1/sources/{content_source_id} | Retrieves a content source by ID
-[**listContentSources**](ContentSourcesAPIApi.md#listContentSources) | **GET** /api/ws/v1/sources | Retrieves all content sources
-[**putContentSource**](ContentSourcesAPIApi.md#putContentSource) | **PUT** /api/ws/v1/sources/{content_source_id} | Update a content source
-[**putContentSourceIcons**](ContentSourcesAPIApi.md#putContentSourceIcons) | **PUT** /api/ws/v1/sources/{content_source_id}/icon | Upload content source icons
+[**createContentSource**](git/workplace-search-kotlin/swagger-codegen/docs/ContentSourcesAPIApi.md#createContentSource) | **POST** /api/ws/v1/sources | Create a content source
+[**deleteContentSource**](git/workplace-search-kotlin/swagger-codegen/docs/ContentSourcesAPIApi.md#deleteContentSource) | **DELETE** /api/ws/v1/sources/{content_source_id} | Deletes a content source by ID
+[**getAutoQueryRefinementDetails**](git/workplace-search-kotlin/swagger-codegen/docs/ContentSourcesAPIApi.md#getAutoQueryRefinementDetails) | **GET** /api/ws/v1/sources/{content_source_id}/automatic_query_refinement | Retrieves a content source&#x27;s automatic query refinement details
+[**getContentSource**](git/workplace-search-kotlin/swagger-codegen/docs/ContentSourcesAPIApi.md#getContentSource) | **GET** /api/ws/v1/sources/{content_source_id} | Retrieves a content source by ID
+[**listContentSources**](git/workplace-search-kotlin/swagger-codegen/docs/ContentSourcesAPIApi.md#listContentSources) | **GET** /api/ws/v1/sources | Retrieves all content sources
+[**putContentSource**](git/workplace-search-kotlin/swagger-codegen/docs/ContentSourcesAPIApi.md#putContentSource) | **PUT** /api/ws/v1/sources/{content_source_id} | Update a content source
+[**putContentSourceIcons**](git/workplace-search-kotlin/swagger-codegen/docs/ContentSourcesAPIApi.md#putContentSourceIcons) | **PUT** /api/ws/v1/sources/{content_source_id}/icon | Upload content source icons
 
 <a name="createContentSource"></a>
 # **createContentSource**
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 
@@ -242,7 +242,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 
@@ -291,7 +291,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 
@@ -340,7 +340,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearer_auth](../README.md#bearer_auth)
+[bearer_auth](git/workplace-search-kotlin/swagger-codegen/README.mde-search-kotlin/swagger-codegen/README.md#bearer_auth)
 
 ### HTTP request headers
 
