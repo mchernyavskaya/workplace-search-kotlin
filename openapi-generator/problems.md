@@ -58,7 +58,7 @@ The oneOf entries mostly fall into just a few categories: different possible typ
 
 - `string OR number` - could be solved with a specific data type that always serializes to string but has 2 constructors, or serializes to number if it's a number (more hassle but possible). Classes having these types would always be manually created though (added to generator's `ignore`)
   - an alternative would be to scrape the numbers and leave just the string type; we could deal with the numbers internally in the code but the client APIs would be **only** generated with string parameters
-- `single OR array` - kill the single option with fire. Do **not** ever write a code like that. Any typed language client will have a huge headache trying to work around that. Replace with array only, and the array can just contain one value.
+- `single OR array` - [I understand the reason behind this is that any field type in Elastic can be either a value or an array](https://www.elastic.co/guide/en/elasticsearch/reference/master/array.html). However, for the client APIs like this, I would **not** expose a single-value option at all. Any typed language client will have a huge headache trying to work around that. For the typed languages, I would replace any such endpoints with an array-only.
 - different types of objects. They'd have most probably be created manually, using generics and programming to interfaces. It could probably be solved with improving the generator, but that would require a deep, deep dive into its code.
 - for the `POST` and `PUT` responses
   - could use different http response codes for the partial create/update - `422 UNPROCESSABLE ENTITY` for example (not a great fit but...)
