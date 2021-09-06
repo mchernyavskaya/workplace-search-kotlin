@@ -1,4 +1,4 @@
-# Unmappable OpenAPI code
+# openapi-generator - unmappable OpenAPI code
 ## anyOf
 
 15 entries
