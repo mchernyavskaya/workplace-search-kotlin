@@ -93,7 +93,7 @@ A great example of analyzing code can also be found [here (and it contains many 
    - same as above
 - OneOf isn't processed correctly
    - Probably could be fixed by own templates, or using `Any`, or a workaround with generics, but needs looking into
-   - any fix would probably be *ugly* - I'd say we need to look into reorganizing the APIs to mane them more compliant with good practices. **As is, they're a living hell for any strongly typed programming language.**
+   - any fix would probably be *ugly* - I'd say we need to look into reorganizing the APIs to make them more compliant with good practices. **As is, they're a living hell for any strongly typed programming language.**
 - A lot of model classes generated as data classes with empty primary constructor (and therefore do not compile)
    - in swagger-codegen, such classes were simply `class` not `data class`
    - can probably be fixed by own templating or fixing source JSON
